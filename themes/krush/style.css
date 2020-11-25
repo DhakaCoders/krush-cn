@@ -12,3 +12,8 @@ Text Domain: clipfresh
 */
 
 @import url('assets/css/main.css');
+
+.article-con{
+	direction: rtl;
+	text-align: right;
+}
