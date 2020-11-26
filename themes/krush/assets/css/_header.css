@@ -1,11 +1,38 @@
+.header{
+	padding: 55px 0 0;
+}
+.header-inr{
+	position: relative;
+	min-height: 70px;
+	height: 100%;
+	display: flex;
+}
+
+.logo{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+.logo a{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.hdr-menu{
+	margin-left: auto;
+}
 nav.main-nav ul{
 
 }
 nav.main-nav ul li{
-	
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: baseline;
+	padding-left: 65px;
 }
 nav.main-nav ul li a{
-	
+	color: #000000;
 }
 nav.main-nav > ul{
 
