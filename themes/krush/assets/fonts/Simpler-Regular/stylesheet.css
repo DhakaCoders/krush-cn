@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Simpler';
+    src: url('Simpler-Regular.eot');
+    src: url('Simpler-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Simpler-Regular.woff2') format('woff2'),
+        url('Simpler-Regular.woff') format('woff'),
+        url('Simpler-Regular.ttf') format('truetype'),
+        url('Simpler-Regular.svg#Simpler-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
