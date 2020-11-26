@@ -19,14 +19,20 @@
 	display: inline-block;
 	vertical-align: baseline;
 }
+.hdr-menu{
+	margin-left: auto;
+}
 nav.main-nav ul{
 
 }
 nav.main-nav ul li{
-	
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: baseline;
+	padding-left: 65px;
 }
 nav.main-nav ul li a{
-	
+	color: #000000;
 }
 nav.main-nav > ul{
 
