@@ -121,11 +121,11 @@ Containers
 
 .rtl{
 	text-align: right;
-	direction: right;
+	direction: rtl;
 }
 .ltr{
 	text-align: left;
-	direction: left;
+	direction: ltr;
 }
 
 .ulc{
