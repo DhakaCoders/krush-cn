@@ -4,7 +4,7 @@
 
 
 .krushbox-fea-quick-sec{
-	padding: 60px 0;
+	padding: 30px 0;
 }
 .krushbox-fea-quick-sec-inr{
 	display: flex;
@@ -26,17 +26,14 @@
 	display: block;
 	font-size: 35px;
 	line-height: 1;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	font-weight: 400;
 }
-.krushbox-fea-quick-des p{
-	margin-bottom: 40px;
-}
+
 .krushbox-fea-quick-des a{
 	display: inline-block;
 	vertical-align: baseline;
 	color: #000;
-	padding-bottom: 4px;
 	border-bottom: 1px solid #000;
 	line-height: 1;
 }
@@ -46,14 +43,14 @@
 }
 
 .ks-grd-sec-inr ul{
-	margin-left: -16px;
-	margin-right: -16px;
+	margin-left: -8px;
+	margin-right: -8px;
 }
 .ks-grd-sec-inr ul li{
 	float: left;
 	width: 33.3333%;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 .ks-grd-item-img{
 	min-height: 420px;
@@ -63,7 +60,7 @@
 }*/
 
 .ks-about-sec{
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 .ks-about-sec-inr{
@@ -71,12 +68,11 @@
 }
 .ks-about-sec-inr p{
 	font-size: 20px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 }
 .ks-about-sec-inr a{
 	display: inline-block;
 	vertical-align: baseline;
 	color: #000;
-	padding-bottom: 4px;
 	border-bottom: 1px solid #000;
 }
