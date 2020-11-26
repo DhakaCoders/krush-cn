@@ -178,7 +178,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     /* start of Noyon */
 
-
+    $(document).ready(function() {
+      $(".fancybox").fancybox();
+    });
 
      /*start of Milon */
 
