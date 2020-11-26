@@ -1,11 +1,13 @@
 /**
 All Transitions
 */
+.ks-blog-grid-item:hover .ks-blog-grid-item-img,
 a,input,img,textarea,button,svg,i,.dft-transition{
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
+.ks-blog-grid-item:hover .ks-blog-grid-item-img,
 .scale{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
