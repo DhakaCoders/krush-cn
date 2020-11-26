@@ -10,7 +10,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: Html5, Css3, PHP5, Custom post type, Blog
 Text Domain: krush
 */
-
+/**
+Examples: 
+http://themeht.com/bootsland/html/index.html
+http://themeht.com/bootsland/rtl/
+https://www.maariv.co.il/
+https://www.msn.com/he-il?AR=2
+*/
 @import url('assets/css/main.css');
 .article-con{
 	direction: rtl;
