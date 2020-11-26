@@ -3,6 +3,11 @@
 	padding: 55px 0 40px; 
 	margin-top:300px;
 }
+.ftr-col h6{
+	font-size: 14px;
+	font-weight: 900;
+	margin: 0 0 32px 0;
+}
 .ftr-cols{
 	display: flex;
 
@@ -10,7 +15,77 @@
 .ftr-col{
 	width: 33.3333%;
 }
-
+.ftr-col ul{
+	font-size: 14px;
+	line-height: 1;
+}
+.ftr-col ul li{
+	padding-bottom: 20px;
+	padding-left: 20px;
+}
 .ftr-col ul li a{
 	color: #000000;
+	font-weight: 400;
+}
+.ftr-col ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.ftr-col ul li{
+	width: 50%;
+}
+
+.ftr-newsletter-form{
+	padding-top: 45px;
+}
+.ftr-newsletter-form form{
+	position: relative;
+}
+.ftr-newsletter-form input{
+	width: 100%;
+	height: 25px;
+	border-bottom: 1px solid #000;
+	padding: 0 0 0 50px;
+	background: transparent;
+}
+
+
+
+
+.ftr-newsletter-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  opacity: 1;
+}
+.ftr-newsletter-form input::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+  opacity: 1;
+}
+.ftr-newsletter-form input:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  opacity: 1;
+}
+.ftr-newsletter-form input:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+  opacity: 1;
+}
+
+.ftr-newsletter-form button{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	border: none;
+	background: transparent;
+	font-size: 14px;
+	line-height: 1.57;
+	font-weight: 400;
+	padding: 0 5px 0 0;
+}
+.copyright-text{
+	padding: 60px 0 0 0;
+}
+
+.copyright-text p{
+	font-size: 8px;
+	margin-bottom: 0;
 }
