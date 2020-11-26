@@ -17,3 +17,11 @@ Text Domain: clipfresh
 	direction: rtl;
 	text-align: right;
 }
+
+.list{
+	display: flex;
+}
+.list li{
+	width: 20%;
+	text-align: center;
+}
