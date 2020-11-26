@@ -13,15 +13,3 @@ Text Domain: clipfresh
 
 @import url('assets/css/main.css');
 
-.article-con{
-	direction: rtl;
-	text-align: right;
-}
-
-.list{
-	display: flex;
-}
-.list li{
-	width: 20%;
-	text-align: center;
-}
