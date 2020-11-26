@@ -1,0 +1,16 @@
+.footer-wrp{
+	background: #fff5eb;
+	padding: 55px 0 40px; 
+	margin-top:300px;
+}
+.ftr-cols{
+	display: flex;
+
+}
+.ftr-col{
+	width: 33.3333%;
+}
+
+.ftr-col ul li a{
+	color: #000000;
+}
