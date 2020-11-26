@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-Roman.eot');
+    src: url('Palatino-Roman.eot?#iefix') format('embedded-opentype'),
+        url('Palatino-Roman.woff2') format('woff2'),
+        url('Palatino-Roman.woff') format('woff'),
+        url('Palatino-Roman.ttf') format('truetype'),
+        url('Palatino-Roman.svg#Palatino-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
