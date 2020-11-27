@@ -143,7 +143,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	
 }
 
-
 .hdr-search-popup{
 	position: fixed;
 	top: 0;
@@ -152,8 +151,13 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	bottom: 0;
 	background: #fff5ea;
 	z-index: 100;
-	overflow-y: auto;
 	display: none;
+}
+.hdr-search-popup-inr{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
