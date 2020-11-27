@@ -172,9 +172,42 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
+
+
+
     /*start of Ranojit */
 
 
+
+if($('.hdr-search-btn').length){
+    $('.hdr-search-btn').on('click', function(){
+      $('body').addClass('hdr-search-popup-active');
+    });
+}
+
+if($('.close-icon').length){
+    $('.close-icon').on('click', function(){
+      $('body').removeClass('hdr-search-popup-active');
+    });
+}
+
+
+
+if( $('#sidebar ul').length ){
+  $('#sidebar ul').onePageNav({
+     currentClass: 'current',
+     changeHash: false,
+     scrollSpeed: 500
+   });
+}
+if (windowWidth > 767) {
+  if( $('#sidebar').length ){
+  $('#sidebar').stickySidebar({
+      topSpacing: 100,
+      bottomSpacing: 60
+  });
+}
+}
 
     /* start of Noyon */
 
