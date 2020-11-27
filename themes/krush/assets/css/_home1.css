@@ -43,7 +43,7 @@
 	line-height: 1;
 }
 .krushbox-fea-quick-des a:hover{
-	color: #F2CAAB;
+	color: #f2cdb0;
 }
 
 
@@ -80,6 +80,9 @@
 	transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	-ms-transition: all 0.3s;
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	-ms-transform: scale(0,1);
 }
 
 
@@ -123,10 +126,11 @@
 }
 .ks-grd-item:hover .ks-grd-item-des{
 	visibility: visible;
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-ms-transform: scale(1,1);
 }
-/*.ks-grd-item:hover .ks-grd-item-img{
-	opacity: 0.75;
-}*/
+
 
 .ks-about-sec{
 	padding: 50px 0;
@@ -144,4 +148,7 @@
 	vertical-align: baseline;
 	color: #000;
 	text-decoration: underline;
+}
+.ks-about-sec-inr a:hover{
+	color: #f2cdb0;
 }
