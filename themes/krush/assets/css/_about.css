@@ -1,5 +1,5 @@
 .about-grid-sec{
-
+	padding-top: 40px;
 }
 .about-grid-cntlr{
 	display: flex;
@@ -51,12 +51,17 @@
 	display: inline-block;
 	font-family: SimplerPro_V3;
 	color: #000000;
+	line-height: 1.2;
 	border-bottom: 1px solid #000000;
+}
+.about-grd-desc-link > ul > li > a:hover,
+.about-grid-desc a:hover{
+	color: #f2cdb0;
 }
 .about-grid-lft-img-rt-desc .about-grid-img{
 	order: 2;
 }
-.about-grid-lft-img-rt-desc .about-grid-desc-cntlrr{
+.about-grid-lft-img-rt-desc .about-grid-desc-cntlr{
 	order: 1;
 }
 
@@ -72,6 +77,7 @@
 	font-size: 2.142em;
 	font-weight: 900;
 	margin-bottom: 12px;
+	text-transform: uppercase;
 }
 .about-link-cntlr{
 
@@ -82,8 +88,11 @@
 .about-link-cntlr > ul > li > a{
 	display: inline-block;
 	font-family: 'Palatino-Italic';
-	font-size: 14px;
-	font-weight: normal;
-	font-stretch: normal;
 	line-height: 1.43;
+	color: #000000;
+	text-decoration: underline;
+	line-height: 1.2;
+}
+.about-link-cntlr > ul > li > a:hover{
+	color: #f2cdb0;
 }
