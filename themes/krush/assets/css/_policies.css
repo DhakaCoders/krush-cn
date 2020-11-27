@@ -19,21 +19,25 @@
 	position: absolute;
 	right: 0;
 	float: left;
-	padding-top: 52px;
+	
 }
 
 .article-txt{
-	max-width: 545px;
+	max-width: 617px;
 	width: 100%;
 }
 
 .article-wrap .sidebar ul li a{
 	color: #000;
 }
+.article-wrap .sidebar ul li a:hover{
+	color: #f2cdb0;
+}
 
 .article-wrap .sidebar__inner{
 	padding-bottom: 30px;
 	transition: all 0.3s;
+	padding-top: 52px;
 }
 
 
