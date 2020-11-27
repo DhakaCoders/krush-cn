@@ -23,6 +23,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     /*font-family: SimplerPro_V3;*/
     font-weight: 400;
+    text-align: right;
+    direction: rtl;
 }
 p{
 	line-height: 1.2;
