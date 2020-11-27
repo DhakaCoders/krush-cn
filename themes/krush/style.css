@@ -39,3 +39,9 @@ https://www.msn.com/he-il?AR=2
 	direction: left;
 }
 */
+body .inline-bg{
+	min-height: 0;
+}
+.inline-bg img{
+	width: 100%;
+}
