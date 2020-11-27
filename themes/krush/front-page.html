@@ -33,6 +33,12 @@
     
     <!-- start of Ranojit -->
     
+    <symbol id="close-icon-svg" xmlns="http://www.w3.org/2000/svg" width="22.886" height="30.651" viewBox="0 0 22.886 30.651">
+      <g id="x" transform="translate(-0.057 0.335)">
+        <path id="Line" d="M0,0,21.213,21.213" transform="translate(1 4)" stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+        <path id="Line_Copy" data-name="Line Copy" d="M15,0,0,25.981" transform="matrix(-0.966, -0.259, 0.259, -0.966, 15.382, 29.479)" stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </symbol>
 
 
 
@@ -76,14 +82,32 @@
                 </li>
                 <li class="hdr-search-item">
                   <div>
-                    <a href="">
+                    <a href="#" class="hdr-search-btn">
                       <i></i>
                     </a>
+
                     <div class="hdr-search-popup">
-                      <div class="search-popup-con">
-                        <h2>Looking for something?</h2>
+                      <div class="close-icon">
+                        <i>
+                          <svg class="close-icon-svg" width="22.886" height="30.651" viewBox="0 0 22.886 30.651" fill="#000">
+                            <use xlink:href="#close-icon-svg"></use>
+                          </svg> 
+                        </i>
+                      </div>
+                      <div class="hdr-search-popup-inr">
+
+                        <div class="search-popup-con">
+                          <h2>Looking for something?</h2>
+                          <div class="search-popup-form">
+                            <form>
+                              <input type="search" placeholder="הקלידי שם של דגם, קולקציה, קטגוריה… ">
+                              <button> חפשי </button>
+                            </form>
+                          </div>
+                        </div>
                       </div>
                     </div>
+
                   </div>
                 </li>
               </ul>
@@ -97,11 +121,11 @@
                   <li><a href="#">חנות</a></li>
                   <li class="menu-item-has-children">
                     <a href="#">מגזין</a>
-                    <div class="mega-menu-cntlr">
+                    <!-- <div class="mega-menu-cntlr">
                       <ul>
                         
                       </ul>
-                    </div>
+                    </div> -->
                   </li>
                   <li><a href="#">אודות</a></li>
                 </ul>
@@ -236,32 +260,32 @@
       <div class="col-md-12">
         <div class="featured-product-inr">
           <div class="fea-pro-cntlr">
-            <div class="fea-pro-img inline-bg" style="background-image: url('assets/images/fea-pro-img-001.jpg');">
-              
+            <div class="fea-pro-img">
+              <img src="assets/images/fea-pro-img-001.jpg" alt="">
             </div>
             <div class="fea-pro-desc-cntlr">
               <div class="fea-pro-desc-hdr">
                 <h2 class="fea-pro-desc-cntlr-title">קראשיות כותבות</h2>
               </div>
               <div class="fea-pro-desc">
-                <p>״מרגישה שסופסוף אני שמה כיסוי שאני מרגישה איתו בנח, לא מחופשת, ושבמקום להרוס את הלוק - הוא מקפיץ אותו ועושה אותו אפילו עוד יותר שיק״</p>
+                <p>״מרגישה שסופסוף אני שמה כיסוי שאני מרגישה איתו בנח, לא מחופשת, ושבמקום להרוס את הלוק - הוא מקפיץ אותו ועושה אותו אפילו עוד יותר שיק״ </p>
               </div>
               <div class="fea-pro-desc-date">
-                <span>תמר, 29, מודיעין</span>
+                <span>תמר, 29, מודיעין </span>
               </div>
             </div>
           </div>
           <div class="fea-pro-cntlr fea-pro-lft-img-rt-desc">
-            <div class="fea-pro-img inline-bg" style="background-image: url('assets/images/fea-pro-img-002.jpg');">
-              
+            <div class="fea-pro-img">
+              <img src="assets/images/fea-pro-img-002.jpg" alt="">
             </div>
             <div class="fea-pro-desc-cntlr">
               <div class="fea-pro-desc-hdr">
-                <h2 class="fea-pro-desc-cntlr-title">קCostume Made</h2>
+                <h2 class="fea-pro-desc-cntlr-title"> english title </h2>
               </div>
               <div class="fea-pro-desc">
-                <h3 class="fea-pro-desc-title">special day?</h3>
-                <p>אנחנו מקיימות פגישות והתאמה אישית של אביזרי ראש במיוחד בשבילך</p>
+                <h3 class="fea-pro-desc-title ltr"> special day? </h3>
+                <p> אנחנו מקיימות פגישות והתאמה אישית של אביזרי ראש במיוחד בשבילך  </p>
                 <div class="fea-pro-desc-btn">
                   <a href="#">הזמיני תור עכשיו</a>
                 </div>
@@ -280,7 +304,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <div class="gallery-inr">
+        <div class="gallery-col-cntlr">
           <div class="gallery-col">
             <div class="gallery-col-wrap">
               <div class="gallery gallery-columns-2">
@@ -378,7 +402,7 @@
   </div>    
 </section>
 
-<footer class="footer-wrp rtl">
+<footer class="footer-wrp">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12">

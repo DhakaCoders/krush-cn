@@ -39,8 +39,8 @@
 	padding: 20px 0;
 }
 .fea-pro-desc-cntlr-title{
-	font-size: 14px;
 	font-weight: 900;
+	font-size: 1em;
 	font-style: normal;
 	color: #000000;
 	line-height: 1;
@@ -52,7 +52,7 @@
 	margin: 0 auto;
 }
 .fea-pro-desc p{
-	font-size: 20px;
+	font-size: 1.42em;
 	font-weight: 400;
 	font-style: italic;
 	line-height: 1.35;
@@ -60,18 +60,20 @@
 	margin-bottom: 30px;
 }
 .fea-pro-desc-title{
-	font-size: 35px;
+	text-transform: uppercase;
+	font-size: 2.5em;
 	font-weight: 400;
 	line-height: 1.06;
 	color: #000000;
 	margin-bottom: 20px;
+	text-align: center;
+	direction: ltr;
 }
 .fea-pro-desc-btn{
 
 }
 .fea-pro-desc-btn a{
 	display: inline-block;
-	font-size: 14px;
 	font-weight: 400;
 	color: #010101;
 	margin-bottom: 0;
@@ -91,9 +93,8 @@
 }
 .fea-pro-desc-date span{
 	display: inline-block;
-	font-size: 14px;
 	font-weight: 400;
-	color: #000000
+	color: #000000;
 	margin-bottom: 0;
 }
 
@@ -117,17 +118,18 @@
 }
 .gallery-desc-title{
 	font-family: Palatino-Roman;
-	font-size: 35px;
+	font-size: 2.5em;
 	font-weight: 400;
 	line-height: 1.06;
 	color: #000000;
 	display: block;
 	margin-bottom: 35px;
+	text-transform: uppercase;
 }
 .gallery-desc-title span{
 	display: block;
-	font-family: Palatino;
-	font-style: italic;
+	font-family: 'Palatino-Italic';
+	text-transform: initial;
 	margin-top: 15px;
 }
 
