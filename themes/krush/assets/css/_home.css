@@ -40,6 +40,7 @@
 }
 .fea-pro-desc-cntlr-title{
 	font-weight: 900;
+	font-size: 1em;
 	font-style: normal;
 	color: #000000;
 	line-height: 1;
@@ -59,11 +60,14 @@
 	margin-bottom: 30px;
 }
 .fea-pro-desc-title{
+	text-transform: uppercase;
 	font-size: 2.5em;
 	font-weight: 400;
 	line-height: 1.06;
 	color: #000000;
 	margin-bottom: 20px;
+	text-align: center;
+	direction: ltr;
 }
 .fea-pro-desc-btn{
 
@@ -90,7 +94,7 @@
 .fea-pro-desc-date span{
 	display: inline-block;
 	font-weight: 400;
-	color: #000000
+	color: #000000;
 	margin-bottom: 0;
 }
 
@@ -120,11 +124,12 @@
 	color: #000000;
 	display: block;
 	margin-bottom: 35px;
+	text-transform: uppercase;
 }
 .gallery-desc-title span{
 	display: block;
-	font-family: Palatino;
-	font-style: italic;
+	font-family: 'Palatino-Italic';
+	text-transform: initial;
 	margin-top: 15px;
 }
 
