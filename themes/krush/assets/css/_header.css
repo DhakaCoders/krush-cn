@@ -9,6 +9,8 @@
 .hdr-elements{
 	margin-top: auto;
 	padding-bottom: 24px;
+	order: 1;
+	margin-right: auto;
 }
 
 .hdr-elements ul li{
