@@ -1,5 +1,7 @@
-.home-banner{
-	min-height: 600px;
+.home-page-banner img,
+.krushbox-fea-quick-img img,
+.ks-grd-item-img img{
+	width: 100%;
 }
 
 
@@ -45,7 +47,7 @@
 	margin-right: -8px;
 }
 .ks-grd-sec-inr ul li{
-	float: left;
+	float: right;
 	width: 33.3333%;
 	padding-left: 8px;
 	padding-right: 8px;
