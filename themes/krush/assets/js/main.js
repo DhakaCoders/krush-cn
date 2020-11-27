@@ -54,23 +54,11 @@ $('.fancybox').fancybox({
 }
 
 
-/**
-Responsive on 767px
-*/
-
 // if (windowWidth <= 767) {
   $('.toggle-btn').on('click', function(){
     $(this).toggleClass('menu-expend');
     $('.toggle-bar ul').slideToggle(500);
   });
-
-
-// }
-
-
-
-// http://codepen.io/norman_pixelkings/pen/NNbqgG
-// https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
 
 
 /**
@@ -172,13 +160,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-
-
-
-    /*start of Ranojit */
-
-
-
 if($('.hdr-search-btn').length){
     $('.hdr-search-btn').on('click', function(e){
       e.preventDefault();
@@ -210,28 +191,11 @@ if (windowWidth > 767) {
   }
 }
 
-    /* start of Noyon */
-
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
-    });
-
-     /*start of Milon */
 
 
+$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
 
-     /*start of Shariful */
-
-
-
-
-
-
-
-
-
-
-
-    new WOW().init();
 
 })(jQuery);
