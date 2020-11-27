@@ -192,6 +192,23 @@ if($('.close-icon').length){
 }
 
 
+
+if( $('#sidebar ul').length ){
+  $('#sidebar ul').onePageNav({
+     currentClass: 'current',
+     changeHash: false,
+     scrollSpeed: 500
+   });
+}
+if (windowWidth > 767) {
+  if( $('#sidebar').length ){
+  $('#sidebar').stickySidebar({
+      topSpacing: 100,
+      bottomSpacing: 60
+  });
+}
+}
+
     /* start of Noyon */
 
     $(document).ready(function() {
