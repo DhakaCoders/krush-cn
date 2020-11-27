@@ -8,7 +8,8 @@ a,input,img,textarea,button,svg,i,.dft-transition{
 	-webkit-transition: all 0.5s;
 }
 .ks-blog-grid-item:hover .ks-blog-grid-item-img,
-.scale{
+.scale,
+.close-icon{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
