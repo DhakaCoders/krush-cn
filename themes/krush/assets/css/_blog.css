@@ -16,7 +16,7 @@ ks-blog-grid-item-sec-wrp
 	padding: 0 15px 30px;
 }
 .ks-blog-grid-item-wrp ul li:nth-child(2n+1){
-	clear: left;
+	clear: right;
 }
 .ks-blog-grid-item-img{
 	transition: all 0.5s;
@@ -28,10 +28,12 @@ ks-blog-grid-item-sec-wrp
 	overflow: hidden;
 }
 .ks-blog-grid-item-img{
-	min-height: 700px;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
+}
+.ks-blog-grid-item-img img{
+	width: 100%;
 }
 .ks-blog-grid-item-dsc{
 	text-align: center;
@@ -70,25 +72,26 @@ ks-blog-grid-item-sec-wrp
 .ks-blog-grid-item-title:hover a{
 	color: #ff0000;
 }
+.ks-blog-grid-item-dsc .blog-excerpt{
+	padding-top: 30px;
+	height: 30px;
+	overflow: hidden;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
 .ks-blog-grid-item-dsc p{
 	font-family: 'Simpler';
 	font-style: normal;
 	margin-bottom: 0;
-	margin-top: 30px;
+	margin-top: 0;
 	line-height: 1.5;
-	display: none;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.ks-blog-grid-item:hover .ks-blog-grid-item-dsc{
-	height: 200px;
-}
-.ks-blog-grid-item:hover .ks-blog-grid-item-dsc p{
-	display: block;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+.ks-blog-grid-item:hover .blog-excerpt{
+	height: 75px;
 }
 .ks-loadmore-btn{
 	text-align: center;
