@@ -21,6 +21,10 @@
 	float: left;
 }
 
+.article-wrap .sidebar ul li a{
+	color: #000;
+}
+
 .article-wrap .sidebar__inner{
 	padding-bottom: 30px;
 	transition: all 0.3s;
