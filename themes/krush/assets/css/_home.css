@@ -36,12 +36,13 @@
 	right: 0;
 	left: 0;
 	text-align: center;
-	padding: 20px 0;
+	padding: 20px 30px;
 }
 .fea-pro-desc-cntlr-title{
 	font-weight: 900;
 	font-size: 1em;
 	font-style: normal;
+	text-transform: uppercase;
 	color: #000000;
 	line-height: 1;
 }
@@ -54,20 +55,23 @@
 .fea-pro-desc p{
 	font-size: 1.42em;
 	font-weight: 400;
-	font-style: italic;
+	
 	line-height: 1.35;
 	color: #000000;
 	margin-bottom: 30px;
 }
+.fea-pro-desc-italic{
+	font-style: italic;
+}
 .fea-pro-desc-title{
 	text-transform: uppercase;
 	font-size: 2.5em;
-	font-weight: 400;
 	line-height: 1.06;
 	color: #000000;
 	margin-bottom: 20px;
 	text-align: center;
 	direction: ltr;
+	font-family: 'Palatino-Roman';
 }
 .fea-pro-desc-btn{
 
@@ -77,10 +81,11 @@
 	font-weight: 400;
 	color: #010101;
 	margin-bottom: 0;
+	line-height: 1.2;
 	border-bottom: 1px solid #000000;
 }
 .fea-pro-desc-btn a:hover{
-	color: #e1873f;
+	color: #f2cdb0;
 }
 
 .fea-pro-desc-date{
@@ -88,7 +93,7 @@
 	bottom: 0;
 	right: 0;
 	left: 0;
-	padding: 20px 0;
+	padding: 20px 30px;
 	text-align: center;
 }
 .fea-pro-desc-date span{
@@ -135,8 +140,6 @@
 
 
 .gallery {
-	/*margin-left: -12px;
-	margin-right: -12px;*/
 }
 
 .gallery:after {
@@ -148,9 +151,10 @@
 .gallery-item {
 	margin: 0;
 	float: left;
-	/*padding: 0 12px;
-	margin-bottom: 24px;*/
 }
+/*.gallery-item a{
+	display: inline-block;
+}*/
 
 .gallery-item img {
 	width: 100%;

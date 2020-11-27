@@ -112,8 +112,6 @@ nav.main-nav ul{
 
 }
 nav.main-nav ul li{
-	font-size: 14px;
-
 	display: inline-block;
 	vertical-align: baseline;
 	padding: 0 0 15px 35px;
@@ -142,7 +140,9 @@ nav.main-nav > ul > li.menu-item-has-children > a{
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	
 }
-
+nav.main-nav > ul > li > a:hover{
+	color: #f2cdb0;
+}
 
 body.hdr-search-popup-active .hdr-search-popup{
 	display: block;
@@ -150,6 +150,12 @@ body.hdr-search-popup-active .hdr-search-popup{
 body.hdr-search-popup-active{
 	overflow: hidden;
 }
+
+
+
+
+
+
 .hdr-search-popup{
 	position: fixed;
 	top: 0;
@@ -177,12 +183,19 @@ body.hdr-search-popup-active{
 	top: 30px;
 	cursor: pointer;
 }
+.close-icon:hover{
+	opacity: .8;
+}
 
+.search-popup-con{
+	width: 100%;
+}
 
 .search-popup-con h2{
 	font-size: 2.5em;
 	font-family: 'Palatino-Italic';
 	margin-bottom: 65px;
+	text-align: center;
 }
 .search-popup-form{
 	 
@@ -197,6 +210,7 @@ body.hdr-search-popup-active{
     padding: 0 0 0 50px;
     background: transparent;
     text-align: right;
+    direction: rtl;
 }
 
 .search-popup-form button {
@@ -211,6 +225,9 @@ body.hdr-search-popup-active{
     font-weight: 400;
     padding: 0 5px 0 0;
     cursor: pointer;
+}
+.search-popup-form button:hover{
+	opacity: .8;
 }
 
 .search-popup-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
