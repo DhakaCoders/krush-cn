@@ -112,8 +112,6 @@ nav.main-nav ul{
 
 }
 nav.main-nav ul li{
-	font-size: 14px;
-
 	display: inline-block;
 	vertical-align: baseline;
 	padding: 0 0 15px 35px;
@@ -218,6 +216,9 @@ body.hdr-search-popup-active{
     font-weight: 400;
     padding: 0 5px 0 0;
     cursor: pointer;
+}
+.search-popup-form button:hover{
+	opacity: .8;
 }
 
 .search-popup-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */

@@ -34,13 +34,13 @@
 
 .krushbox-fea-quick-des p{
 	margin-bottom: 20px;
+	font-size: 1.4285em;
 }
 .krushbox-fea-quick-des a{
 	display: inline-block;
 	vertical-align: baseline;
 	color: #000;
-	text-decoration: underline;
-	line-height: 1;
+	border-bottom: 1px solid #000;
 }
 .krushbox-fea-quick-des a:hover{
 	color: #f2cdb0;
@@ -91,11 +91,9 @@
 	vertical-align: baseline;
 	margin-bottom: 10px;
 }
-.ks-gidb-venus{
-	float: right;
-}
+
 .ks-gidb-price{
-	float: left;
+	margin-right: auto;
 }
 
 .ks-gidb-venus strong{
@@ -123,6 +121,8 @@
 	bottom: 10px;
 	left: 12px;
 	right: 10px;
+	display: flex;
+	align-items: center;
 }
 .ks-grd-item:hover .ks-grd-item-des{
 	visibility: visible;
@@ -147,7 +147,7 @@
 	display: inline-block;
 	vertical-align: baseline;
 	color: #000;
-	text-decoration: underline;
+	border-bottom: 1px solid #000;
 }
 .ks-about-sec-inr a:hover{
 	color: #f2cdb0;
