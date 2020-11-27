@@ -39,4 +39,32 @@
 }
 
 
+@font-face {
+    font-family: 'Palatino-Italic';
+    src: url('Palatino-Italic/Palatino-Italic.eot');
+    src: url('Palatino-Italic/Palatino-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Palatino-Italic/Palatino-Italic.woff2') format('woff2'),
+        url('Palatino-Italic/Palatino-Italic.woff') format('woff'),
+        url('Palatino-Italic/Palatino-Italic.ttf') format('truetype'),
+        url('Palatino-Italic/Palatino-Italic.svg#Palatino-Italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Palatino-BoldItalic';
+    src: url('Palatino-BoldItalic/Palatino-BoldItalic.eot');
+    src: url('Palatino-BoldItalic/Palatino-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Palatino-BoldItalic/Palatino-BoldItalic.woff2') format('woff2'),
+        url('Palatino-BoldItalic/Palatino-BoldItalic.woff') format('woff'),
+        url('Palatino-BoldItalic/Palatino-BoldItalic.ttf') format('truetype'),
+        url('Palatino-BoldItalic/Palatino-BoldItalic.svg#Palatino-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
 

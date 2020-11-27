@@ -19,14 +19,15 @@ body {
     background: #ffffff;
     color: #000000;
     font-size: 14px;
-    line-height: 24px;
-    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    font-family: 'Simpler';
     /*font-family: SimplerPro_V3;*/
-    font-weight: 400;
+    text-align: right;
+    direction: rtl;
 }
 p{
-	line-height: 1.2;
-	margin-bottom: 15px;
+	line-height: 1.5;
+	margin-bottom: 25px;
 }
 h1::-moz-selection,h2::-moz-selection,h3::-moz-selection,h4::-moz-selection,h5::-moz-selection,h6::-moz-selection,p::-moz-selection {
   color: #fff;
@@ -55,21 +56,21 @@ data-value = normal*/
 Containers fluid
 */
 .container-fluid{
-	padding-left: 75px;
-	padding-right: 75px;
+	padding-left: 40px;
+	padding-right: 40px;
   	width: auto;
 }
 .container-fluid .row{
-	margin-left: -75px;
-	margin-right: -75px;
+	margin-left: -40px;
+	margin-right: -40px;
 }
 
 .container-fluid .row .col-lg-1, .container-fluid .row .col-lg-10, .container-fluid .row .col-lg-11, .container-fluid .row .col-lg-12, .container-fluid .row .col-lg-2, .container-fluid .row .col-lg-3, .container-fluid .row .col-lg-4, .container-fluid .row .col-lg-5, .container-fluid .row .col-lg-6, .container-fluid .row .col-lg-7, .container-fluid .row .col-lg-8, .container-fluid .row .col-lg-9, 
 .container-fluid .row .col-md-1, .container-fluid .row .col-md-10, .container-fluid .row .col-md-11, .container-fluid .row .col-md-12, .container-fluid .row .col-md-2, .container-fluid .row .col-md-3, .container-fluid .row .col-md-4, .container-fluid .row .col-md-5, .container-fluid .row .col-md-6, .container-fluid .row .col-md-7, .container-fluid .row .col-md-8, .container-fluid .row .col-md-9, 
 .container-fluid .row .col-sm-1, .container-fluid .row .col-sm-10, .container-fluid .row .col-sm-11, .container-fluid .row .col-sm-12, .container-fluid .row .col-sm-2, .container-fluid .row .col-sm-3, .container-fluid .row .col-sm-4, .container-fluid .row .col-sm-5, .container-fluid .row .col-sm-6, .container-fluid .row .col-sm-7, .container-fluid .row .col-sm-8, .container-fluid .row .col-sm-9, 
 .container-fluid .row .col-xs-1, .container-fluid .row .col-xs-10, .container-fluid .row .col-xs-11, .container-fluid .row .col-xs-12, .container-fluid .row .col-xs-2, .container-fluid .row .col-xs-3, .container-fluid .row .col-xs-4, .container-fluid .row .col-xs-5, .container-fluid .row .col-xs-6, .container-fluid .row .col-xs-7, .container-fluid .row .col-xs-8, .container-fluid .row .col-xs-9{
-	padding-left: 75px;
-	padding-right: 75px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 

@@ -54,23 +54,11 @@ $('.fancybox').fancybox({
 }
 
 
-/**
-Responsive on 767px
-*/
-
 // if (windowWidth <= 767) {
   $('.toggle-btn').on('click', function(){
     $(this).toggleClass('menu-expend');
     $('.toggle-bar ul').slideToggle(500);
   });
-
-
-// }
-
-
-
-// http://codepen.io/norman_pixelkings/pen/NNbqgG
-// https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
 
 
 /**
@@ -172,32 +160,42 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-    /*start of Ranojit */
-
-
-
-    /* start of Noyon */
-
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
+if($('.hdr-search-btn').length){
+    $('.hdr-search-btn').on('click', function(e){
+      e.preventDefault();
+      $('body').addClass('hdr-search-popup-active');
     });
+}
 
-     /*start of Milon */
-
-
-
-     /*start of Shariful */
-
-
-
+if($('.close-icon').length){
+    $('.close-icon').on('click', function(){
+      $('body').removeClass('hdr-search-popup-active');
+    });
+}
 
 
 
+if( $('#sidebar ul').length ){
+  $('#sidebar ul').onePageNav({
+     currentClass: 'current',
+     changeHash: false,
+     scrollSpeed: 500
+   });
+}
+if (windowWidth > 767) {
+  if( $('#sidebar').length ){
+    $('#sidebar').stickySidebar({
+        topSpacing: 100,
+        bottomSpacing: 60
+    });
+  }
+}
 
 
 
+$(document).ready(function() {
+  $(".fancybox").fancybox();
+});
 
-
-    new WOW().init();
 
 })(jQuery);

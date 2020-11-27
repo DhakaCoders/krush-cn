@@ -10,7 +10,8 @@ a,input,img,textarea,button,svg,i,.dft-transition{
 }
 .ks-blog-video-grid:hover .ks-blog-video-grid-img,
 .ks-blog-grid-item:hover .ks-blog-grid-item-img,
-.scale{
+.scale,
+.close-icon{
 	transform: scale(1.1);
 	-ms-transform: scale(1.1);
 	-webkit-transform: scale(1.1);

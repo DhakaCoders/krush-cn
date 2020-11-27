@@ -9,18 +9,18 @@
 @import url('_footer.css');
 
 
-
-/*start of Ranojit*/
-
-
-
-/*start of Noyon*/
+@import url('_policies.css');
 
 
 
-/*start of Milon*/
+@import url('_about.css');
+
+
+
+
 @import url('_blog.css');
 
 
-/*start of Shariful*/
+
 @import url('_home1.css');
+@import url('_products.css');

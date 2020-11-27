@@ -1,5 +1,7 @@
-.home-banner{
-	min-height: 600px;
+.home-page-banner img,
+.krushbox-fea-quick-img img,
+.ks-grd-item-img img{
+	width: 100%;
 }
 
 
@@ -13,55 +15,123 @@
 }
 .krushbox-fea-quick-des{
 	width:  33.8624%;
-	order: 2;
+	order: 1;
 	padding-left: 20px;
 	text-align: center;
 }
 .krushbox-fea-quick-img{
 	width:  66.1375%;
-	order: 1;
+	order: 2;
 }
 
 .kfqd-title{
 	display: block;
-	font-size: 35px;
+	font-size: 2.5em;
 	line-height: 1;
-	margin-bottom: 15px;
-	font-weight: 400;
+	margin-bottom: 10px;
+	font-family: 'Palatino-Italic';
 }
 
+.krushbox-fea-quick-des p{
+	margin-bottom: 20px;
+	font-size: 1.4285em;
+}
 .krushbox-fea-quick-des a{
 	display: inline-block;
 	vertical-align: baseline;
 	color: #000;
 	border-bottom: 1px solid #000;
-	line-height: 1;
+	line-height: 1.2;
+}
+.krushbox-fea-quick-des a:hover{
+	color: #f2cdb0;
 }
 
-.krushbox-fea-quick-img{
-	min-height: 420px;
-}
+
 
 .ks-grd-sec-inr ul{
-	margin-left: -8px;
-	margin-right: -8px;
+	margin-left: -7px;
+	margin-right: -7px;
 }
 .ks-grd-sec-inr ul li{
-	float: left;
+	float: right;
 	width: 33.3333%;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.ks-grd-item{
+	position: relative;
 }
 .ks-grd-item-img-ctlr{
 	position: relative;
 	overflow: hidden;
 }
-.ks-grd-item-img{
-	min-height: 420px;
-}
-/*.ks-grd-item:hover .ks-grd-item-img{
+.ks-grd-item-des{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-left: 12px;
+	background: #eee;
 	opacity: 0.75;
-}*/
+	visibility: hidden;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	-ms-transform: scale(0,1);
+}
+
+
+.ks-grd-item-des-top span{
+	display: inline-block;
+	vertical-align: baseline;
+	margin-bottom: 10px;
+}
+
+.ks-gidb-price{
+	margin-right: auto;
+}
+
+.ks-gidb-venus strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 1.1428em;
+	font-family: 'Palatino-BoldItalic';
+	margin-left: 4px;
+}
+.woocommerce-Price-amount bdi{
+	font-size: 0.8571em;
+}
+.woocommerce-Price-amount bdi span{
+	margin-right: 8px;
+}
+.woocommerce-Price-amount bdi span del{
+	text-decoration-line: line-through;
+	-webkit-text-decoration-line: line-through;
+	-ms-text-decoration-line: line-through;
+	text-decoration-color: #ff0000;
+}
+
+.ks-grd-item-des-btm{
+	position: absolute;
+	bottom: 10px;
+	left: 12px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+}
+.ks-grd-item:hover .ks-grd-item-des{
+	visibility: visible;
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+}
+
 
 .ks-about-sec{
 	padding: 50px 0;
@@ -71,7 +141,7 @@
 	text-align: center;
 }
 .ks-about-sec-inr p{
-	font-size: 20px;
+	font-size: 1.4285em;
 	margin-bottom: 10px;
 }
 .ks-about-sec-inr a{
@@ -79,4 +149,8 @@
 	vertical-align: baseline;
 	color: #000;
 	border-bottom: 1px solid #000;
+	line-height: 1.2;
+}
+.ks-about-sec-inr a:hover{
+	color: #f2cdb0;
 }

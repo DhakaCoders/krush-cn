@@ -1,12 +1,11 @@
 .footer-wrp{
 	background: #fff5eb;
-	padding: 55px 0 40px; 
-	margin-top:300px;
+	padding: 55px 0 40px;
 }
 .ftr-col h6{
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: 900;
-	margin: 0 0 32px 0;
+	margin: 0 0 15px 0;
 }
 .ftr-cols{
 	display: flex;
@@ -20,7 +19,7 @@
 	line-height: 1;
 }
 .ftr-col ul li{
-	padding-bottom: 20px;
+	padding-bottom: 9px;
 	padding-left: 20px;
 }
 .ftr-col ul li a{
@@ -36,7 +35,7 @@
 }
 
 .ftr-newsletter-form{
-	padding-top: 45px;
+	padding-top: 29px;
 }
 .ftr-newsletter-form form{
 	position: relative;
@@ -82,10 +81,10 @@
 	padding: 0 5px 0 0;
 }
 .copyright-text{
-	padding: 60px 0 0 0;
+	padding: 30px 0 0 0;
 }
 
 .copyright-text p{
-	font-size: 8px;
+	font-size: 0.5714em;
 	margin-bottom: 0;
 }

@@ -18,24 +18,8 @@ https://www.maariv.co.il/
 https://www.msn.com/he-il?AR=2
 */
 @import url('assets/css/main.css');
-.article-con{
-	direction: rtl;
-	text-align: right;
+.sitemap{
+	direction: ltr;
+	text-align: left;
+	min-height: 600px;
 }
-
-.list{
-	display: flex;
-}
-.list li{
-	width: 20%;
-	text-align: center;
-}
-/*.rtl{
-	text-align: right;
-	direction: right;
-}
-.ltr{
-	text-align: center;
-	direction: left;
-}
-*/
