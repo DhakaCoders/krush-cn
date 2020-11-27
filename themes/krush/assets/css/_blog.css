@@ -21,7 +21,6 @@ ks-blog-grid-item-sec-wrp
 .ks-blog-grid-item-ctlr{
 	margin: 0 -15px;
 	padding-bottom: 30px;
-	clear: right;
 }
 .ks-blog-grid-item{
 	width: 50%;
@@ -132,6 +131,7 @@ ks-blog-grid-item-sec-wrp
 */
 .ks-blog-video-grid-sec-wrp{
 	padding-top: 20px;
+	padding-bottom: 30px;
 }
 .ks-blog-video-grid-sec-wrp .ks-loadmore-btn{
     padding-top: 10px;
@@ -213,6 +213,9 @@ ks-blog-grid-item-sec-wrp
  Success Css
 -------------------
 */
+.ks-success-banner-sec-wrp{
+	padding-top: 10px;
+}
 .ks-success-banner{
 	min-height: 420px;
 	background-position: top center !important;
@@ -235,4 +238,113 @@ ks-blog-grid-item-sec-wrp
 }
 .ks-success-gift-dsc p{
 	margin-bottom: 35px;
+}
+
+/*
+----------------
+ Responsive Css
+----------------
+*/
+
+@media(min-width: 1600px){
+	
+}
+@media(min-width:1800px){
+	
+}
+
+@media(max-width: 1499px){
+
+}
+
+@media(max-width: 1399px){
+	
+}
+
+@media(max-width: 1299px){
+
+}
+
+@media(max-width: 1199px){
+	.ks-success-gift-dsc-title {
+	    font-size: 29px;
+	}
+	.ks-success-banner {
+	    min-height: 400px;
+	}
+
+}
+
+@media(max-width: 991px){
+	.ks-success-gift-dsc-title {
+	    font-size: 28px;
+	}
+	.ks-success-banner {
+	    min-height: 380px;
+	}
+}
+
+@media(max-width: 767px){
+	.ks-blog-grid-item-ctlr {
+	    margin: 0;
+	    padding-bottom: 0;
+	}
+	.ks-blog-grid-item {
+	    width: 100%;
+	    padding: 0;
+	    padding-bottom: 25px;
+	}
+	.ks-blog-grid-item-sec-wrp {
+	    padding-top: 50px;
+	    padding-bottom: 50px;
+	}
+	.ks-loadmore-btn {
+	    padding-top: 10px;
+	}
+	.ks-blog-video-grid-wrp ul {
+	    margin: 0;
+	}
+	.ks-blog-video-grid-wrp ul li {
+	    width: 100%;
+	    padding: 0 0 15px;
+	}
+	.ks-blog-video-grid-wrp ul li:nth-child(2n+1){
+		clear: none;
+	}
+	.ks-success-gift-dsc-title {
+	    font-size: 27px;
+	}
+	.ks-success-gift-dsc {
+	    padding: 0 10px;
+	}
+	.ks-success-banner {
+	    min-height: 350px;
+	}
+	.ks-success-gift-dsc-sec-wrp {
+	    padding-top: 50px;
+	}
+	.ks-success-gift-dsc p {
+	    margin-bottom: 25px;
+	}
+
+
+}
+
+@media(max-width: 575px){
+	.ks-success-gift-dsc-title {
+	    font-size: 26px;
+	}
+	.ks-success-banner {
+	    min-height: 320px;
+	}
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
 }
