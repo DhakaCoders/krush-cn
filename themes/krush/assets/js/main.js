@@ -202,11 +202,11 @@ if( $('#sidebar ul').length ){
 }
 if (windowWidth > 767) {
   if( $('#sidebar').length ){
-  $('#sidebar').stickySidebar({
-      topSpacing: 100,
-      bottomSpacing: 60
-  });
-}
+    $('#sidebar').stickySidebar({
+        topSpacing: 100,
+        bottomSpacing: 60
+    });
+  }
 }
 
     /* start of Noyon */
