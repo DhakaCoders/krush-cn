@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Palatino';
+    src: url('Palatino-BoldItalic.eot');
+    src: url('Palatino-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Palatino-BoldItalic.woff2') format('woff2'),
+        url('Palatino-BoldItalic.woff') format('woff'),
+        url('Palatino-BoldItalic.ttf') format('truetype'),
+        url('Palatino-BoldItalic.svg#Palatino-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
