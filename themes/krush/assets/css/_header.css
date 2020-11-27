@@ -217,6 +217,9 @@ body.hdr-search-popup-active{
     padding: 0 5px 0 0;
     cursor: pointer;
 }
+.search-popup-form button:hover{
+	opacity: .8;
+}
 
 .search-popup-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgba(0, 0, 0, 0.4);
