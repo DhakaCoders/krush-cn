@@ -19,6 +19,12 @@
 	position: absolute;
 	right: 0;
 	float: left;
+	padding-top: 52px;
+}
+
+.article-txt{
+	max-width: 545px;
+	width: 100%;
 }
 
 .article-wrap .sidebar ul li a{
@@ -45,10 +51,9 @@
 
 .article-txt{
 	padding-bottom: 23px;
-	border-bottom: 1px solid #dcdcdc;
 }
 .article-content h4{
-  margin-bottom: 44px;
+  margin-bottom: 15px;
 }
 
 

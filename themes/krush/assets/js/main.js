@@ -180,7 +180,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 if($('.hdr-search-btn').length){
-    $('.hdr-search-btn').on('click', function(){
+    $('.hdr-search-btn').on('click', function(e){
+      e.preventDefault();
       $('body').addClass('hdr-search-popup-active');
     });
 }
