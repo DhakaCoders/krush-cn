@@ -178,11 +178,15 @@ body.hdr-search-popup-active{
 	cursor: pointer;
 }
 
+.search-popup-con{
+	width: 100%;
+}
 
 .search-popup-con h2{
 	font-size: 2.5em;
 	font-family: 'Palatino-Italic';
 	margin-bottom: 65px;
+	text-align: center;
 }
 .search-popup-form{
 	 
@@ -197,6 +201,7 @@ body.hdr-search-popup-active{
     padding: 0 0 0 50px;
     background: transparent;
     text-align: right;
+    direction: rtl;
 }
 
 .search-popup-form button {
