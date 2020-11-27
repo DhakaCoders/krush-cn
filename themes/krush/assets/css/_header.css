@@ -153,4 +153,5 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	background: #fff5ea;
 	z-index: 100;
 	overflow-y: auto;
+	display: none;
 }
