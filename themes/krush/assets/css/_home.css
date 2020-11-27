@@ -12,6 +12,9 @@
 	width: 50%;
 	min-height: 420px;
 }
+.fea-pro-img img{
+	width: 100%;
+}
 .fea-pro-desc-cntlr{
 	width: 50%;
 	position: relative;
@@ -95,9 +98,10 @@
 }
 
 
-.gallery-inr{
+.gallery-col-cntlr{
 	display: flex;
 	flex-wrap: wrap;
+	margin: 0 -10px;
 }
 .gallery-col{
 	width: 33.33%;
@@ -109,7 +113,6 @@
 	justify-content: center;
 }
 .gallery-desc{
-	padding: 30px;
 	text-align: center;
 }
 .gallery-desc-title{

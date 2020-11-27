@@ -142,3 +142,16 @@ nav.main-nav > ul > li.menu-item-has-children > a{
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	
 }
+
+
+.hdr-search-popup{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: #fff5ea;
+	z-index: 100;
+	overflow-y: auto;
+	display: none;
+}
