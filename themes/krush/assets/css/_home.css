@@ -36,12 +36,13 @@
 	right: 0;
 	left: 0;
 	text-align: center;
-	padding: 20px 0;
+	padding: 20px 30px;
 }
 .fea-pro-desc-cntlr-title{
 	font-weight: 900;
 	font-size: 1em;
 	font-style: normal;
+	text-transform: uppercase;
 	color: #000000;
 	line-height: 1;
 }
@@ -54,10 +55,13 @@
 .fea-pro-desc p{
 	font-size: 1.42em;
 	font-weight: 400;
-	font-style: italic;
+	
 	line-height: 1.35;
 	color: #000000;
 	margin-bottom: 30px;
+}
+.fea-pro-desc-italic{
+	font-style: italic;
 }
 .fea-pro-desc-title{
 	text-transform: uppercase;
@@ -77,6 +81,7 @@
 	font-weight: 400;
 	color: #010101;
 	margin-bottom: 0;
+	line-height: 1;
 	border-bottom: 1px solid #000000;
 }
 .fea-pro-desc-btn a:hover{
@@ -88,7 +93,7 @@
 	bottom: 0;
 	right: 0;
 	left: 0;
-	padding: 20px 0;
+	padding: 20px 30px;
 	text-align: center;
 }
 .fea-pro-desc-date span{
