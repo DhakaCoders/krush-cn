@@ -38,9 +38,7 @@
 	line-height: 1;
 }
 
-.krushbox-fea-quick-img{
-	min-height: 420px;
-}
+
 
 .ks-grd-sec-inr ul{
 	margin-left: -8px;
@@ -56,9 +54,7 @@
 	position: relative;
 	overflow: hidden;
 }
-.ks-grd-item-img{
-	min-height: 420px;
-}
+
 /*.ks-grd-item:hover .ks-grd-item-img{
 	opacity: 0.75;
 }*/
