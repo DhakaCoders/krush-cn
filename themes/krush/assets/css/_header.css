@@ -142,7 +142,9 @@ nav.main-nav > ul > li.menu-item-has-children > a{
 nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	
 }
-
+nav.main-nav > ul > li > a:hover{
+	color: #f2cdb0;
+}
 
 body.hdr-search-popup-active .hdr-search-popup{
 	display: block;
