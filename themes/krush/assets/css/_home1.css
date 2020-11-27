@@ -109,7 +109,7 @@
 	text-decoration-line: line-through;
 	-webkit-text-decoration-line: line-through;
 	-ms-text-decoration-line: line-through;
-	text-decoration-color: red;
+	text-decoration-color: #ff0000;
 }
 
 .ks-grd-item-des-btm{
