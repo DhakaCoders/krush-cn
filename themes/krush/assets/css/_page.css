@@ -28,16 +28,19 @@
 
 
 .sitemap{
-	padding: 50px 0 70px;
+	padding: 150px 0 100px;
+}
+.sitemap h2{
+	margin-bottom: 40px;
 }
 
-.sitemap ol li a{
-	color: #FF674D;
+.sitemap ul li{
+	padding-bottom: 10px;
 }
-.sitemap ol li{
-	padding-left: 25px;
+.sitemap ul li a{
+	color: #000;
 }
-
-.sitemap ol li a:focus{
+.sitemap ul li a:focus{
 	text-decoration: underline;
 }
+
