@@ -154,4 +154,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 	z-index: 100;
 	overflow-y: auto;
 	display: none;
+	align-items: center;
+	justify-content: center;
 }
