@@ -11,6 +11,7 @@
 	padding-bottom: 24px;
 	order: 1;
 	margin-right: auto;
+	direction: ltr;
 }
 
 .hdr-elements ul li{
