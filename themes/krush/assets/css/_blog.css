@@ -11,12 +11,17 @@ ks-blog-grid-item-sec-wrp
 	margin: 0 -15px;
 }
 .ks-blog-grid-item-wrp ul li{
-	float: left;
+	float: right;
 	width: 50%;
 	padding: 0 15px 30px;
 }
 .ks-blog-grid-item-wrp ul li:nth-child(2n+1){
 	clear: left;
+}
+.ks-blog-grid-item-img{
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .ks-blog-grid-item-img-ctlr{
 	position: relative;
@@ -32,9 +37,10 @@ ks-blog-grid-item-sec-wrp
 	text-align: center;
 	background: #FFF5EA;
 	padding: 30px 10px 35px;
-}
-.ks-blog-grid-item-wrp ul li:nth-child(2) .ks-blog-grid-item-dsc{
-	padding-bottom: 15px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	min-height: 125px;
 } 
 .ks-blog-grid-item-dsc span{
 	display: inline-block;
@@ -68,8 +74,21 @@ ks-blog-grid-item-sec-wrp
 	font-family: 'Simpler';
 	font-style: normal;
 	margin-bottom: 0;
-	margin-top: 35px;
+	margin-top: 30px;
 	line-height: 1.5;
+	display: none;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.ks-blog-grid-item:hover .ks-blog-grid-item-dsc{
+	height: 200px;
+}
+.ks-blog-grid-item:hover .ks-blog-grid-item-dsc p{
+	display: block;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .ks-loadmore-btn{
 	text-align: center;
