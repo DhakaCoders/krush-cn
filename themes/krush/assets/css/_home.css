@@ -66,12 +66,12 @@
 .fea-pro-desc-title{
 	text-transform: uppercase;
 	font-size: 2.5em;
-	font-weight: 400;
 	line-height: 1.06;
 	color: #000000;
 	margin-bottom: 20px;
 	text-align: center;
 	direction: ltr;
+	font-family: 'Palatino-Roman';
 }
 .fea-pro-desc-btn{
 

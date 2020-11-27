@@ -64,11 +64,26 @@
 
 }
 .about-link-inr{
-
+	text-align: center;
+	padding: 30px 30px;
 }
 .about-link-title{
-
+	font-family: SimplerPro_V3;
+	font-size: 2.142em;
+	font-weight: 900;
+	margin-bottom: 12px;
 }
 .about-link-cntlr{
 
+}
+.about-link-cntlr > ul > li{
+	padding: 5px 0;
+}
+.about-link-cntlr > ul > li > a{
+	display: inline-block;
+	font-family: 'Palatino-Italic';
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1.43;
 }
