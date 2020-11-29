@@ -4,6 +4,11 @@
 
 .ks-pro-grd-entry-hdr{
 	display: block;
+}
+.ks-pgeh-title{
+	display: block;
+	font-size: 1em;
+	line-height: 1;
 	margin-bottom: 20px;
 }
 
@@ -48,8 +53,12 @@
 	padding-right: 8px;
 	padding-bottom: 16px;
 }
-.ks-pro-btm-grd ul li:nth-child(2n+1){
-	clear: left;
+.ks-pro-btm-grd ul li:nth-child(3n+1){
+	clear: right;
+}
+
+.ks-pro-btm-grd-item{
+	position: relative;
 }
 
 
@@ -59,6 +68,40 @@
 }
 
 
+.ks-pro-btm-grd-item-des{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-left: 12px;
+	background: #eee;
+	opacity: 0.75;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	-ms-transform: scale(0,1);
+	visibility: hidden;
+}
+
+.ks-pro-btm-grd-item:hover .ks-pro-btm-grd-item-des{
+	visibility: visible;
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+}
+
+.ks-grd-item-des-top{
+	display: flex;
+	align-items: center;
+}
+.ks-gidt-rgt{
+	margin-right: auto;
+}
 
 
 .ks-pro-grd-link{
