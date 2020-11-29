@@ -4,6 +4,11 @@
 
 .ks-pro-grd-entry-hdr{
 	display: block;
+}
+.ks-pgeh-title{
+	display: block;
+	font-size: 1em;
+	line-height: 1;
 	margin-bottom: 20px;
 }
 
@@ -48,8 +53,8 @@
 	padding-right: 8px;
 	padding-bottom: 16px;
 }
-.ks-pro-btm-grd ul li:nth-child(2n+1){
-	clear: left;
+.ks-pro-btm-grd ul li:nth-child(3n+1){
+	clear: right;
 }
 
 .ks-pro-btm-grd-item{
@@ -90,8 +95,13 @@
 	-ms-transform: scale(1,1);
 }
 
-
-
+.ks-grd-item-des-top{
+	display: flex;
+	align-items: center;
+}
+.ks-gidt-rgt{
+	margin-right: auto;
+}
 
 
 .ks-pro-grd-link{
