@@ -1,0 +1,36 @@
+blog video
+---------------------
+
+Desktop -> 
+
+1. https://prnt.sc/vs3frh
+	sprite hobe
+
+2. https://prnt.sc/vs3ggb
+	atar line height ta r aktu kom hobe
+
+3. https://prnt.sc/vs3hzq
+	ai font size ta tule daw, body thake pabe
+
+
+success
+---------------------
+
+Desktop -> 
+
+1. https://prnt.sc/vs3jsd
+	font-size em a dite hobe
+	i) https://www.w3schools.com/tags/ref_pxtoemconversion.asp
+		ai link a jaw
+	ii) https://prnt.sc/vs3kor
+		ata font size hobe
+	N.B.---> tomar sob page ai font size ta update koro em a, jekhane jekhane 14px ache sekhane lagbena font size dite bcoz body thake 14px pabe.
+
+
+2. https://prnt.sc/vs3o5r
+	i) img tag a use koro, img ar width 100% dite hobe img tag a use korate
+	ii) min-height ta tule daw
+    iii) ai project a amra inline bg use korni , sob img tag a
+
+
+N.B.---> desktop fix ses hole responsive tene dekhte hobe thik ache kina.
