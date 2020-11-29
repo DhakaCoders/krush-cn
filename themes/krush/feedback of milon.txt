@@ -24,7 +24,7 @@ Desktop ->
 		ai link a jaw
 	ii) https://prnt.sc/vs3kor
 		ata font size hobe
-	N.B.---> tomar sob page ai font size ta update koro em a, jekhane jekhane 14px ache sekhane lagbena font size dite bcoz body thake 14px pabe.
+	N.B.---> tomar sob page ai font size ta update koro,  em a nite hobe, jekhane jekhane 14px ache sekhane font size 1em dite hobe. r 14px ar upore and niche hole convert kore size ta dite hobe
 
 
 2. https://prnt.sc/vs3o5r
