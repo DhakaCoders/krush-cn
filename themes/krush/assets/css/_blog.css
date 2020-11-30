@@ -49,7 +49,6 @@ ks-blog-grid-item-sec-wrp
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
-	min-height: 125px;
 } 
 .ks-blog-grid-item-dsc span{
 	display: inline-block;
@@ -248,7 +247,9 @@ ks-blog-grid-item-sec-wrp
 */
 
 @media(max-width: 1199px){
-
+	.ks-blog-grid-item-dsc p br{
+		display: none;
+	}
 }
 
 @media(max-width: 991px){
@@ -290,12 +291,17 @@ ks-blog-grid-item-sec-wrp
 	.ks-success-gift-dsc p {
 	    margin-bottom: 25px;
 	}
+	.ks-blog-grid-item-dsc p{
+		display: block;
+	}
 
 
 }
 
 @media(max-width: 575px){
-
+	.ks-success-gift-dsc-title{
+		font-size: 2em;
+	}
 }
 
 @media(max-width: 479px){
