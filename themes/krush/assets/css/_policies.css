@@ -18,7 +18,7 @@
 	width: 100%;
 	position: absolute;
 	right: 0;
-	float: left;
+	float: right;
 	
 }
 
@@ -61,6 +61,7 @@
 }
 
 
+
 @media(max-width: 1199px){
 	
 
@@ -68,13 +69,28 @@
 @media(max-width: 991px){
 	
 
-
+.single-article-wrap .article-content{
+	padding-left: 0;
+}
 
 	
 }
 
 @media(max-width: 767px){
-	
+	.single-article-wrap .article-content{
+		padding-right: 0;
+	}
+	.article-wrap .sidebar{
+		position: static;
+		width: 100%;
+	}
+	.article-wrap .sidebar {
+	    float: none;
+	    text-align: center;
+	    max-width: 100%;
+	    border-bottom: 1px solid #ddd;
+	    margin-bottom: 20px;
+	}
 }
 
 @media(max-width: 575px){	

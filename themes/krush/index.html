@@ -27,6 +27,8 @@
   </svg>
 </head>
 <body>
+
+<div class="bdoverlay"></div>
 <header class="header">
   <div class="container-fluid">
       <div class="row">
@@ -86,19 +88,27 @@
               <a href="#"><img src="assets/images/logo.png"></a>
             </div>
             <div class="hdr-menu rtl">
+              <div class="line-icon show-sm">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
               <nav class="main-nav">
-                <ul class="clearfix reset-list">
-                  <li><a href="#">חנות</a></li>
-                  <li class="menu-item-has-children">
-                    <a href="#">מגזין</a>
-                    <!-- <div class="mega-menu-cntlr">
-                      <ul>
-                        
-                      </ul>
-                    </div> -->
-                  </li>
-                  <li><a href="#">אודות</a></li>
-                </ul>
+                <div class="show-sm closebtn-cntlr">
+                    <div class="closebtn">
+                      <span></span>
+                      <span></span>
+                    </div>
+                </div>
+                <div class="main-nav-inr">
+                  <ul class="clearfix reset-list">
+                    <li><a href="#">חנות</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="#">מגזין</a>
+                    </li>
+                    <li><a href="#">אודות</a></li>
+                  </ul>
+                </div>
               </nav>
             </div>
           </div>
@@ -133,7 +143,7 @@
     <div class="row">
       <div class="col-sm-12">
           <div class="ftr-cols">
-            <div class="ftr-col">
+            <div class="ftr-col ftr-col-1">
               <h6>ממדיניות  </h6>
               <ul class="reset-list">
                 <li><a href="#">החלפות והחזרות    </a></li>
@@ -144,7 +154,7 @@
               </ul>
               
             </div>
-            <div class="ftr-col contact-us-col">
+            <div class="ftr-col contact-us-col ftr-col-2">
               <h6>מצור קשר  <h6>
               <ul class="reset-list">
                 <li><a href="#">e-mail </a></li>
@@ -154,7 +164,7 @@
 
               </ul>
             </div>
-            <div class="ftr-col">
+            <div class="ftr-col ftr-col-3">
               <div class="ftr-newsletter-form">
                 <form>
                   <input type="email" name="" placeholder="צטרפי לניוזלטר ">
