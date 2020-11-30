@@ -79,6 +79,10 @@
 	line-height: 1.57;
 	font-weight: 400;
 	padding: 0 5px 0 0;
+	cursor: pointer;
+}
+.ftr-newsletter-form button:hover{
+	opacity: .8;
 }
 .copyright-text{
 	padding: 30px 0 0 0;
