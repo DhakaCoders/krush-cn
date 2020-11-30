@@ -20,10 +20,10 @@
 }
 
 .ks-bpc-des-rgt-top{
-	margin-bottom: 350px;
+	margin-bottom: 250px;
 }
 .ks-bpc-des-rgt-mdl{
-	margin-bottom: 290px;
+	margin-bottom: 250px;
 }
 .ks-bpc-des-rgt-btm{
 	margin-bottom: 75px;
@@ -62,6 +62,13 @@
 	display: block;
 	font-family: 'Palatino-Italic';
 	margin-bottom: 10px;
+}
+
+.ks-bpc-des-lft-title{
+	display: block;
+	font-size: 1em;
+	margin-bottom: 10px;
+	font-weight: 900;
 }
 
 
