@@ -172,7 +172,7 @@ body.hdr-search-popup-active{
 }
 .hdr-search-popup-inr{
 	width: 100%;
-    max-width: 510px;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
 	height: 100%;
@@ -180,13 +180,21 @@ body.hdr-search-popup-active{
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .close-icon{
 	position: absolute;
 	right: 40px;
 	top: 30px;
 	cursor: pointer;
+	z-index: 120;
 }
+.close-icon i{
+	display: inline-block;
+	vertical-align: baseline;
+}
+
 .close-icon:hover{
 	opacity: .8;
 }
@@ -260,7 +268,7 @@ body.hdr-search-popup-active{
 	}
 
 }
-@media(min-width:1800px){
+@media(min-width:1768px){
 	body {
 		font-size: 24px;
 	}
@@ -275,6 +283,9 @@ body.hdr-search-popup-active{
 	.hdr-search-item a i {
 	    width: 20px;
 	    height: 20px;
+	}
+	.logo{
+		top: -6px;
 	}
 }
 
@@ -295,8 +306,24 @@ body.hdr-search-popup-active{
 }
 
 @media(max-width: 991px){
-
-	
+	.logo a {
+	    max-width: 180px;
+	}
+	.logo{
+		top: 7px;
+	}
+	.search-popup-con h2 {
+	    font-size: 2em;
+	    margin-bottom: 40px;
+	}
+	.close-icon {
+	    max-width: 20px;
+	    top: 20px;
+	}
+	.close-icon svg{
+		width: 100%!important;
+		height: auto!important;
+	}
 }
 
 @media(max-width: 767px){
@@ -304,7 +331,9 @@ body.hdr-search-popup-active{
 }
 
 @media(max-width: 575px){
-
+	.search-popup-form input{
+		font-size: .9em;
+	}
 
 }
 
