@@ -280,7 +280,12 @@
 }
 
 @media(max-width: 479px){
-
+	.ks-bpc-des-rgt-top {
+	    padding-bottom: 50px;
+	}
+	.ks-bpc-des-rgt-mdl {
+	    padding-bottom: 20px;
+	}
 
 }
 
