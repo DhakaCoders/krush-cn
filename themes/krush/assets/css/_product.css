@@ -1,3 +1,43 @@
 .product-page-cntlr{
 	padding: 0 0 30px;
 }
+.product-page-grds-cntlr{
+	padding-bottom: 30px;
+	padding-top: 35px;
+}
+
+.product-page-grds-cntlr{
+	display: flex;
+}
+.product-page-grd-lft{
+	width: 50%;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+.product-page-grd-rgt{
+	width: 50%;
+}
+
+.fl-product-summery-hdr{
+	padding-top: 65px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+.fl-product-summery-hdr .product_title{
+	font-size: 3.5714em;
+	line-height: 1;
+	margin-bottom: 10px;
+	 font-family: 'Palatino-BoldItalic';
+}
+
+.fl-product-summery-hdr strong{
+	display: block;
+	font-size: 1em;
+	margin-bottom: 12px;
+}
+
+.fl-product-summery{
+	max-width: 315px;
+	width: 100%;
+}
