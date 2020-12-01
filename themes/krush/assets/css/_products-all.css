@@ -20,19 +20,23 @@
 	padding: 0 8px;
 	height: 855px;
 }
+
 .thubnail-grd-big-img{
 	height: 100%;
 	width: 100%;
-}
-.thubnail-grd-big-img-lft .thubnail-grd-big-img-col{
-	order: initial;
 }
 .thubnail-grd-small-col{
 	padding: 0 8px;
 	margin: -8px 0;
 	width: 33.33%;
+	order: 1;
 }
-
+.thubnail-grd-big-img-lft .thubnail-grd-big-img-col{
+	order: 1;
+}
+.thubnail-grd-big-img-lft .thubnail-grd-small-col{
+	order: 2;
+}
 .thubnail-grd-small-img-cntlr{
 	padding: 8px 0;
 	height: 50%;
