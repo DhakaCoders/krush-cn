@@ -294,7 +294,10 @@ ks-blog-grid-item-sec-wrp
 	.ks-blog-grid-item-dsc p{
 		display: block;
 	}
-
+	.ks-blog-grid-item-dsc{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
 }
 
