@@ -123,6 +123,9 @@ nav.main-nav ul li{
 nav.main-nav ul li a{
 	color: #000000;
 }
+nav.main-nav .main-nav-inr > ul > li > a:hover{
+	color: #f2cdb0;
+}
 nav.main-nav > ul{
 
 }
