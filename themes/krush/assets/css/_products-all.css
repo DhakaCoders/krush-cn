@@ -18,9 +18,10 @@
 	order: 2;
 	width: 75%;
 	padding: 0 8px;
+	height: 855px;
 }
-.thubnail-grd-big-img img{
-	width: 100%;
+.thubnail-grd-big-img-lft .thubnail-grd-big-img{
+	order: initial;
 }
 .thubnail-grd-small-col{
 	padding: 0 8px;
@@ -29,6 +30,7 @@
 }
 .thubnail-grd-small-img{
 	padding: 8px 0;
+	height: 50%;
 }
 .thubnail-grd-small-img img{
 	width: 100%;
