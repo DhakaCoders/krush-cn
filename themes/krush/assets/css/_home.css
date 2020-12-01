@@ -48,7 +48,7 @@
 }
 .fea-pro-desc{
 	text-align: center;
-	max-width: 494px;
+	max-width: 465px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -205,10 +205,14 @@
 
 
 
-
-@media(max-width: 1768px){
+@media(min-width: 1600px){
 	.fea-pro-desc{
-		max-width: 430px;
+		max-width: 386px;
+	}
+}
+@media(min-width: 1768px){
+	.fea-pro-desc{
+		max-width: 465px;
 	}
 }
 @media(max-width: 1600px){
