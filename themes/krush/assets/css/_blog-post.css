@@ -1,7 +1,11 @@
 .ks-blog-pst-cont{
 	padding-top: 100px;
+	padding-bottom: 60px;
 }
 
+.ks-blog-pst-cont-entry-hdr{
+	padding-bottom: 30px;
+}
 .ks-bpceh-title{
 	display: block;
 	font-size: 2.1428em;
@@ -19,22 +23,16 @@
 	padding-right: 90px;
 }
 
-.ks-bpc-des-rgt-top{
-	margin-bottom: 70px;
-}
-.ks-bpc-des-rgt-mdl{
-	margin-bottom: 70px;
-}
-.ks-bpc-des-rgt-btm{
-	margin-bottom: 50px;
-}
+
 .ks-bpc-des-rgt-top img,
 .ks-bpc-des-rgt-mdl img{
 	width: 100%;
 }
 
-.ks-bpc-des-rgt-btm{
+.ks-bpc-des-ctlr{
 	text-align: center;
+	min-height: 200px;
+	margin-top: auto;
 }
 .ks-bpc-des-rgt-btm-title{
 	display: block;
@@ -116,16 +114,7 @@
 
 
 @media(max-width:1699px){
-	/*.ks-bpc-des-rgt-top,
-	.ks-bpc-des-rgt-mdl{
-	    margin-bottom: 100px;
-	}
-	.ks-bpc-des-rgt-btm {
-	    margin-bottom: 50px;
-	}
-	.ks-bpc-des-lft{
-		padding-right: 140px;
-	}*/
+	
 }
 
 @media(max-width: 1599px){
@@ -138,11 +127,8 @@
 	
 }
 
-@media(min-width: 1299px){
-	.ks-bpc-des-rgt-top,
-	.ks-bpc-des-rgt-mdl{
-	    margin-bottom: 50px;
-	}
+@media(max-width: 1299px){
+	
 }
 
 @media(max-width: 1199px){
@@ -151,9 +137,6 @@
 	}
 	.show-lg{
 		display: block!important;
-	}
-	.ks-bpc-des-lft{
-		padding-left: 50px;
 	}
 
 }
@@ -173,6 +156,7 @@
 	}
 	.ks-bpc-des-rgt{
 		width: 100%;
+		margin-bottom: 20px;
 	}
 	.ks-bpc-des-lft{
 		width: 100%;
@@ -185,7 +169,8 @@
 	.ks-blog-post-lfrdes{
 		padding-right: 30px;
 	}
-	.ks-blog-post-lfrdes p, .ks-blog-post-rgt-des p {
+	.ks-blog-post-lfrdes p, 
+	.ks-blog-post-rgt-des p {
 	    font-size: 1.2857em;
 	}
 	.ks-blog-post-rgt-des {
@@ -204,11 +189,7 @@
 	}
 	.ks-blog-pst-cont {
 	    padding-top: 45px;
-	}
-	.ks-bpc-des-rgt-top,
-	.ks-bpc-des-rgt-mdl,
-	.ks-bpc-des-rgt-btm{
-	    margin-bottom: 40px;
+	    padding-bottom: 40px;
 	}
 	.ks-blog-post-lftdes-rgtimg-sec-inr, 
 	.ks-blog-post-lftimg-rgtdes-sec-inr{
@@ -236,6 +217,9 @@
 	.ks-blog-post-lftimg{
 		margin-bottom: 30px;
 	}
+	.ks-bpc-des-ctlr {
+	    min-height: 160px;
+	}
 	
 }
 
@@ -249,6 +233,12 @@
 	.ks-blog-post-lfrdes p, 
 	.ks-blog-post-rgt-des p {
 	    font-size: 1.1857em;
+	}
+	.ks-blog-pst-cont-entry-hdr {
+	    padding-bottom: 10px;
+	}
+	.ks-bpc-des-ctlr {
+	    min-height: 120px;
 	}
 	
 
