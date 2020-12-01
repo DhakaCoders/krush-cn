@@ -192,7 +192,8 @@
 		padding: 30px 20px; 
 		min-height: 300px;
 	}
-	.ks-pro-btm-grd-item-des{
+	.ks-pro-btm-grd-item-des,
+	.ks-grd-item-des{
 		position: static;
 		opacity: 1;
 		transition: none;
