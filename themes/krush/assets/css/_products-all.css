@@ -16,21 +16,26 @@
 }
 .thubnail-grd-big-img-col{
 	order: 2;
-	width: 75%;
+	width: 66.66%;
 	padding: 0 8px;
 	height: 855px;
 }
+
 .thubnail-grd-big-img{
 	height: 100%;
 	width: 100%;
 }
-.thubnail-grd-big-img-lft .thubnail-grd-big-img-col{
-	order: initial;
-}
 .thubnail-grd-small-col{
 	padding: 0 8px;
 	margin: -8px 0;
-	width: 25%;
+	width: 33.33%;
+	order: 1;
+}
+.thubnail-grd-big-img-lft .thubnail-grd-big-img-col{
+	order: 1;
+}
+.thubnail-grd-big-img-lft .thubnail-grd-small-col{
+	order: 2;
 }
 .thubnail-grd-small-img-cntlr{
 	padding: 8px 0;
@@ -40,7 +45,14 @@
 	height: 100%;
 	width: 100%;
 }
-
+.thubnail-grd-small-img img{
+	display: none;
+	width: 100%;
+}
+.thubnail-grd-big-img img{
+	display: none;
+	width: 100%;
+}
 .two-grd-img-mdul{
 	display: flex;
 	flex-wrap: wrap;
@@ -128,15 +140,95 @@
 }
 @media(max-width: 991px){
 	.thubnail-grd-big-img-col{
-		height: 600px;
+		width: 60%;
+
+	}
+	.thubnail-grd-small-col{
+		width: 40%;
+	}
+	.three-gdr-col-desc-title{
+		font-size: 2.3em;
+	}
+	.three-gdr-col-desc-sub-title{
+		font-size: 2.3em;
+
 	}
 }
 @media(max-width: 767px){
-
+	.thubnail-grd-img-mdul-cntlr{
+		display: block;
+		margin-bottom: 0;
+	}
+	.thubnail-grd-big-img-col{
+		width: 100%;
+		margin-bottom: 16px;
+		height: initial;
+	}
+	.thubnail-grd-small-col{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.thubnail-grd-small-img{
+		background: transparent;
+	}
+	.thubnail-grd-big-img{
+		background: transparent;
+	}
+	.thubnail-grd-small-img img{
+		display: block;
+		width: 100%;
+	}
+	.thubnail-grd-big-img img{
+		display: block;
+		width: 100%;
+	}
+	.thubnail-grd-small-img-cntlr{
+		padding: 0 8px;
+		height: initial;
+		width: 50%;
+	}
+	.three-gdr-col-desc-title{
+		font-size: 2.1em;
+	}
+	.three-gdr-col-desc-sub-title{
+		font-size: 2.1em;
+		
+	}
+	.three-gdr-mdul{
+		margin-bottom: 0;
+	}
+	.two-grd-img-mdul{
+		margin-bottom: 0;
+	}
+	.two-grd-img-col{
+		width: 100%;
+		margin-bottom: 16px;
+	}
+	.three-gdr-col{
+		width: 100%;
+		margin-bottom: 16px;
+	}
 }
 @media(max-width: 639px){
-
+	
 }
 @media(max-width: 575px){
-
+	.three-gdr-col-desc-title{
+		font-size: 2em;
+	}
+	.three-gdr-col-desc-sub-title{
+		font-size: 2em;
+		
+	}
+	.thubnail-grd-small-img-cntlr{
+		width: 100%;
+		margin-bottom: 16px;
+	}
+	.thubnail-grd-small-desc{
+		padding: 15px 0;
+	}
 }

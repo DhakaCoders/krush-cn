@@ -26,6 +26,9 @@
 	color: #000000;
 	font-weight: 400;
 }
+.ftr-col ul li a:hover{
+	opacity: .8;
+}
 .ftr-col ul{
 	display: flex;
 	flex-wrap: wrap;
@@ -47,7 +50,10 @@
 	padding: 0 0 0 50px;
 	background: transparent;
 }
-
+.ftr-newsletter-form input:focus,
+.search-popup-form input:focus{
+	border-color: #cc7856;
+}
 
 
 
