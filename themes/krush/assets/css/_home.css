@@ -10,7 +10,6 @@
 }
 .fea-pro-img{
 	width: 50%;
-	min-height: 420px;
 }
 .fea-pro-img img{
 	width: 100%;
@@ -18,7 +17,7 @@
 .fea-pro-desc-cntlr{
 	width: 50%;
 	position: relative;
-	padding: 100px 50px;
+	padding: 65px 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -45,17 +44,18 @@
 	text-transform: uppercase;
 	color: #000000;
 	line-height: 1;
+	font-family: SimplerPro_V3;
 }
 .fea-pro-desc{
 	text-align: center;
-	max-width: 350px;
+	max-width: 494px;
 	width: 100%;
 	margin: 0 auto;
 }
 .fea-pro-desc p{
 	font-size: 1.42em;
 	font-weight: 400;
-	
+	font-family: SimplerPro_V3;
 	line-height: 1.35;
 	color: #000000;
 	margin-bottom: 30px;
@@ -83,6 +83,8 @@
 	margin-bottom: 0;
 	line-height: 1.2;
 	border-bottom: 1px solid #000000;
+	font-family: SimplerPro_V3;
+
 }
 .fea-pro-desc-btn a:hover{
 	color: #f2cdb0;
@@ -101,6 +103,7 @@
 	font-weight: 400;
 	color: #000000;
 	margin-bottom: 0;
+	font-family: SimplerPro_V3;
 }
 
 
@@ -198,4 +201,98 @@
 .gallery-columns-8 .gallery-item:nth-child(8n+1),
 .gallery-columns-9 .gallery-item:nth-child(9n+1) {
 	clear: left;
+}
+
+
+
+
+@media(max-width: 1768px){
+	.fea-pro-desc{
+		max-width: 430px;
+	}
+}
+@media(max-width: 1600px){
+	.fea-pro-desc{
+		max-width: 300px;
+	}
+}
+@media(max-width: 991px){
+	.fea-pro-desc-title{
+		font-size: 2.3em;
+	}
+	.gallery-desc-title{
+		font-size: 2.3em;
+	}
+}
+@media(max-width: 767px){
+	.fea-pro-desc-cntlr{
+		margin-bottom: 15px;
+	}
+	.fea-pro-img{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.fea-pro-desc-cntlr{
+		width: 100%;
+
+	}
+	.fea-pro-desc-cntlr{
+		padding: 50px 0;
+	}
+	.fea-pro-lft-img-rt-desc .fea-pro-img{
+		order: initial;
+	}
+	.fea-pro-lft-img-rt-desc .fea-pro-desc-cntlr{
+		order: initial;
+	}
+	.gallery-col-cntlr{
+		margin: 0;
+	}
+	.gallery-col{
+		width: 100%;
+		padding: 0;
+		margin-bottom: 15px;
+	}
+	.gallery-desc-col{
+		padding: 15px 10px;
+	}
+	.featured-product{
+		margin-bottom: 30px;
+	}
+	.fea-pro-desc-title{
+		font-size: 2.1em;
+	}
+	.gallery-desc-title{
+		font-size: 2.1em;
+	}
+}
+@media(max-width: 639px){
+
+}
+@media(max-width: 575px){
+	.featured-product{
+		margin-bottom: 0;
+	}
+	.fea-pro-desc p{
+		font-size: 1.1em;
+	}
+	.fea-pro-desc-title{
+		font-size: 2em;
+	}
+	.fea-pro-desc-hdr{
+		padding: 10px 0 0 0;
+
+	}
+	.fea-pro-desc-date{
+		padding: 0 0 10px 0;
+	}
+	.gallery-desc-title{
+		font-size: 2em;
+	}
+}
+@media(max-width: 479px){
+
+}
+@media(max-width: 359px){
+
 }

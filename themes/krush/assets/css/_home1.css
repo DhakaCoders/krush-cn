@@ -107,15 +107,19 @@
 }
 .woocommerce-Price-amount bdi{
 	font-size: 0.8571em;
+	text-align: right;
+	direction: rtl;
 }
 .woocommerce-Price-amount bdi span{
 	margin-right: 8px;
 }
 .woocommerce-Price-amount bdi span del{
-	text-decoration-line: line-through;
-	-webkit-text-decoration-line: line-through;
-	-ms-text-decoration-line: line-through;
+	text-decoration: line-through;
+	-webkit-text-decoration: line-through;
+	-ms-text-decoration: line-through;
 	text-decoration-color: #ff0000;
+	-webkit-text-decoration-color: #ff0000;
+	-ms-text-decoration-color: #ff0000;
 }
 
 .ks-grd-item-des-btm{
