@@ -125,6 +125,10 @@
 	.product-page-grd-rgt{
 		width: 100%;
 	}
+	.fl-product-summery {
+	    margin-left: auto;
+	    margin-right: auto;
+	}
 }
 
 @media(max-width: 575px){
