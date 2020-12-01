@@ -34,13 +34,16 @@
 	margin-bottom: 40px;
 }
 
-.sitemap ul li{
+.sitemap ul li,
+.sitemap ol li{
 	padding-bottom: 10px;
 }
-.sitemap ul li a{
+.sitemap ul li a,
+.sitemap ol li a{
 	color: #000;
 }
-.sitemap ul li a:focus{
+.sitemap ul li a:focus,
+.sitemap ol li a:focus{
 	text-decoration: underline;
 }
 
