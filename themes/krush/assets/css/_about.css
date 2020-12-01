@@ -31,6 +31,7 @@
 }
 .about-grid-desc-cntlr p{
 	margin-bottom: 20px;
+	font-family: SimplerPro_V3;
 }
 .about-grid-desc-sub-title{
 	font-family: SimplerPro_V3;
@@ -88,10 +89,9 @@
 .about-link-cntlr > ul > li > a{
 	display: inline-block;
 	font-family: 'Palatino-Italic';
-	line-height: 1.43;
+	line-height: 1.2;
 	color: #000000;
 	text-decoration: underline;
-	line-height: 1.2;
 }
 .about-link-cntlr > ul > li > a:hover{
 	color: #f2cdb0;
