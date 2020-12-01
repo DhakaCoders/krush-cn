@@ -67,6 +67,7 @@
 .ks-bpc-des-lft-title{
 	display: block;
 	font-size: 1em;
+	line-height: 1.5;
 	margin-bottom: 10px;
 	font-weight: 900;
 }
@@ -127,16 +128,21 @@
 	}*/
 }
 
-@media(max-width: 1499px){
-
+@media(max-width: 1599px){
+	.ks-bpc-des-lft p{
+		font-size: 16px;
+	}
 }
 
 @media(max-width: 1399px){
 	
 }
 
-@media(max-width: 1299px){
-
+@media(min-width: 1299px){
+	.ks-bpc-des-rgt-top,
+	.ks-bpc-des-rgt-mdl{
+	    margin-bottom: 50px;
+	}
 }
 
 @media(max-width: 1199px){
@@ -227,7 +233,7 @@
 	.ks-blog-post-lftimg-rgtdes-sec{
 		padding-top: 30px;
 	}
-	.ks-blog-post-rgt-des{
+	.ks-blog-post-lftimg{
 		margin-bottom: 30px;
 	}
 	
