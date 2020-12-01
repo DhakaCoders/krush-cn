@@ -14,25 +14,31 @@
 	margin-bottom: 16px;
 
 }
-.thubnail-grd-big-img{
+.thubnail-grd-big-img-col{
 	order: 2;
 	width: 75%;
 	padding: 0 8px;
+	height: 855px;
 }
-.thubnail-grd-big-img img{
+.thubnail-grd-big-img{
+	height: 100%;
 	width: 100%;
+}
+.thubnail-grd-big-img-lft .thubnail-grd-big-img-col{
+	order: initial;
 }
 .thubnail-grd-small-col{
 	padding: 0 8px;
 	margin: -8px 0;
 	width: 25%;
 }
-.thubnail-grd-small-img{
+.thubnail-grd-small-img-cntlr{
 	padding: 8px 0;
+	height: 50%;
 }
-.thubnail-grd-small-img img{
-	width: 100%;
+.thubnail-grd-small-img{
 	height: 100%;
+	width: 100%;
 }
 
 .two-grd-img-mdul{
