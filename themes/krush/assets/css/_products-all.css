@@ -212,7 +212,12 @@
 		width: 100%;
 		margin-bottom: 16px;
 	}
-	.three-gdr-col-desc-title span{
+
+	.thubnail-grd-small-desc .three-gdr-col-desc .three-gdr-col-desc-title{
+		font-size: 1.8em;
+		margin-bottom: 15px;
+	}
+	.thubnail-grd-small-desc .three-gdr-col-desc .three-gdr-col-desc-title span{
 		margin-top: 10px;
 	}
 }
@@ -222,6 +227,10 @@
 @media(max-width: 575px){
 	.three-gdr-col-desc-title{
 		font-size: 1.8em;
+		margin-bottom: 15px;
+	}
+	.three-gdr-col-desc-title span{
+		margin-top: 10px;
 	}
 	.three-gdr-col-desc-sub-title{
 		font-size: 2em;
@@ -238,4 +247,5 @@
 	.thubnail-grd-small-desc{
 		padding: 15px 0;
 	}
+	
 }
