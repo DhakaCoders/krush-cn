@@ -102,7 +102,7 @@
 }
 
 .ks-gidb-venus strong{
-	display: inline-block;
+	display: inline-block !important;
 	vertical-align: baseline;
 	font-size: 1.1428em;
 	font-family: 'Palatino-BoldItalic';

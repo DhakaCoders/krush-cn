@@ -62,7 +62,9 @@
 }
 
 
-
+.woocommerce .ks-pro-btm-grd ul li span.onsale {
+	display: none !important;
+}
 
 
 @media(max-width: 1499px){
