@@ -195,7 +195,8 @@ ul.reset-list,
 ol.reset-list,
 ul.sub-menu,
 .fl-pagi-ctlr ul,
-.reset-slect ul{
+.reset-slect ul,
+.mega-menu-nav .mega-menu-nav-col ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -203,7 +204,8 @@ ul.sub-menu,
 .reset-list li,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
-.reset-slect ul li{
+.reset-slect ul li,
+.mega-menu-nav .mega-menu-nav-col ul li{
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -212,7 +214,8 @@ ul.sub-menu li,
 .reset-list li:before,
 ul.sub-menu li:before,
 .fl-pagi-ctlr ul li:before,
-.reset-slect ul li:before{
+.reset-slect ul li:before,
+.mega-menu-nav .mega-menu-nav-col ul li:before{
 	content: none!important;
 }
 

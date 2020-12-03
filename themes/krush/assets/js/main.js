@@ -195,7 +195,7 @@ if (windowWidth > 767) {
 /**
 Sidebar menu
 */
-if (windowWidth <= 991) {
+if (windowWidth <= 767) {
   $('.line-icon').on('click', function(e){
     $('nav.main-nav').addClass('opacity-1');
     $('.bdoverlay').addClass('active');
@@ -211,9 +211,9 @@ if (windowWidth <= 991) {
   
   $('li.menu-item-has-children > a').on('click', function(e){
     e.preventDefault();
-    $('li.menu-item-has-children .sub-menu').slideUp(300);
+    $('li.menu-item-has-children .mega-menu-cntlr').slideToggle(300);
     $(this).toggleClass('sub-menu-active');
-    $(this).next().slideDown(300);
+    //$(this).next().slideDown(300);
   });
 }
 
