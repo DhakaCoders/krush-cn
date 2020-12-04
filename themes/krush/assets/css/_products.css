@@ -121,7 +121,20 @@
 ul.woocommerce-widget-layered-nav-list .count {
     display: none;
 }
-
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a{
+	position: relative;
+}
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a::before{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-right: 0;
+    content: "";
+    width: 100%;
+    color: #a00;
+    height: 3px;
+    background: #000
+}
 
 
 @media(max-width: 1499px){
