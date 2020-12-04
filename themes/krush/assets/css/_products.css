@@ -121,6 +121,19 @@
 ul.woocommerce-widget-layered-nav-list .count {
     display: none;
 }
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item {
+    display: inline-block;
+    margin-right: 14px;
+}
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item a .attribute-type{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a{
 	position: relative;
 }
