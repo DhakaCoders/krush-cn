@@ -118,7 +118,9 @@
 	color: #f2cdb0;
 }
 
-
+ul.woocommerce-widget-layered-nav-list .count {
+    display: none;
+}
 
 
 

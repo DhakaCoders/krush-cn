@@ -18,7 +18,14 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
+<?php 
+$logoObj = get_field('hdlogo', 'options');
+if( is_array($logoObj) ){
+  $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+}else{
+  $logo_tag = '';
+}
+?>
 <div class="bdoverlay"></div>
 <header class="header">
   <div class="container-fluid">
@@ -30,15 +37,21 @@
               <ul class="reset-list">
                 <li class="hdr-cart-item">
                   <div>
-                    <a href="#">
-                      <span>3</span>
-                      <i></i>
+                    <a href="<?php echo wc_get_cart_url(); ?>">
+                    <?php 
+                      if( WC()->cart->get_cart_contents_count() > 0 ){
+                        echo sprintf ( '<span>%d</span>', WC()->cart->get_cart_contents_count() );
+                      }else{
+                        echo sprintf ( '<span>%d</span>', 0 );
+                      }  
+                    ?>
+                    <i></i>
                     </a>
                   </div>
                 </li>
                 <li class="hdr-wishlist-item">
                   <div>
-                    <a href="#">
+                    <a href="<?php echo esc_url( home_url('wishlist') );?>">
                       <i></i>
                     </a>
                   </div>
@@ -76,7 +89,9 @@
               </ul>
             </div>
             <div class="logo">
-              <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+              <a href="<?php echo esc_url(home_url('/')); ?>">
+                <?php echo $logo_tag; ?>
+              </a>
             </div>
             <div class="hdr-menu rtl">
               <div class="line-icon show-sm">
@@ -92,45 +107,15 @@
                     </div>
                 </div>
                 <div class="main-nav-inr">
-                  <ul class="clearfix reset-list">
-                    <li class="menu-item-has-children">
-                      <a href="#">חנות</a>
-                      <div class="mega-menu-cntlr">
-                        <div class="mega-menu-cntlr-inr">
-                          
-                          <div class="mega-menu-nav">
-                            <div class="mega-menu-nav-col">
-                              <h6> כל המוצרים  </h6>
-                              <ul>
-                                <li><a href="#"> קשתות  </a></li>
-                                <li><a href="#"> סרטים קשירה   </a></li>
-                                <li><a href="#"> סרטים סקוצ׳  </a></li>
-                                <li><a href="#"> טורבנים  </a></li>
-                                <li><a href="#"> מסכות  </a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-menu-nav-col">
-                              <h6>New In</h6>
-                              <ul>
-                                <li><a href="#"> Sale </a></li>
-                                <li><a href="#"> GiftCard  </a></li>
-                                <li><a href="#"> Costume Made </a></li>
-                                <li><a href="#"> KrushBox </a></li>
-                              </ul>
-                            </div>
-                            
-
-                          </div>
-                          <div class="mega-menu-fea-img">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/mega-menu-fea-img.jpg">
-                          </div>
-                          
-                        </div>
-                      </div>
-                    </li>
-                    <li> <a href="#">מגזין</a></li>
-                    <li><a href="#">אודות</a></li>
-                  </ul>
+                <?php 
+                  $menuOptions = array( 
+                      'theme_location' => 'cbv_main_menu', 
+                      'menu_class' => 'clearfix reset-list',
+                      'container' => '',
+                      'container_class' => ''
+                    );
+                  wp_nav_menu( $menuOptions ); 
+                ?>
                 </div>
               </nav>
             </div>

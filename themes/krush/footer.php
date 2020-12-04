@@ -1,3 +1,10 @@
+<?php 
+  $telefoon = get_field('telephone', 'options');
+  $email = get_field('email', 'options');
+  $facebook_url = get_field('facebook_url', 'options');
+  $instagram_url = get_field('instagram_url', 'options');
+  $copyright_text = get_field('copyright_text', 'options');
+?>
 <footer class="footer-wrp">
   <div class="container-fluid">
     <div class="row">
@@ -5,23 +12,25 @@
           <div class="ftr-cols">
             <div class="ftr-col ftr-col-1">
               <h6>ממדיניות  </h6>
-              <ul class="reset-list">
-                <li><a href="#">החלפות והחזרות    </a></li>
-                <li><a href="#">תקנון  </a></li>
-                <li><a href="#">משלוחים   </a></li>
-                <li><a href="#">שאלות נפוצות   </a></li>
-                <li><a href="#">אחריות   </a></li>
-              </ul>
-              
+              <?php 
+                $fmenuOptions = array( 
+                    'theme_location' => 'cbv_ft_menu', 
+                    'menu_class' => 'reset-list',
+                    'container' => '',
+                    'container_class' => ''
+                  );
+                wp_nav_menu( $fmenuOptions );
+              ?>
             </div>
             <div class="ftr-col contact-us-col ftr-col-2">
               <h6>מצור קשר  <h6>
               <ul class="reset-list">
-                <li><a href="#">e-mail </a></li>
-                <li><a href="#"> פייסבוק  </a></li>
-                <li><a href="#"> טלפון </a></li>
-                <li><a href="#"> אינסטגרם </a></li>
-
+                <?php 
+                  if( !empty($email) ) printf('<li><a href="mailto:%s">%s</a></li>', $email, 'e-mail');
+                  if( !empty($facebook_url) ) printf('<li><a href="%s">פייסבוק</a></li>', $facebook_url);
+                  if( !empty($telefoon) ) printf('<li><a href="tel:%s">טלפון</a></li>', phone_preg($telefoon)); 
+                  if( !empty($instagram_url) ) printf('<li><a href="%s"> אינסטגרם </a></li>', $instagram_url); 
+                ?>
               </ul>
             </div>
             <div class="ftr-col ftr-col-3">
@@ -32,7 +41,7 @@
                 </form>
               </div>
               <div class="copyright-text ltr">
-                <p>&copy; Krush 2020 | Design by Noam Maoz | develope by…</p>
+                <?php if( !empty( $copyright_text ) ) printf( '%s', $copyright_text); ?> 
               </div>
             </div>
           </div>

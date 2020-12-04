@@ -118,3 +118,117 @@ function cbv_woocommerce_breadcrumbs() {
         );
 }
 endif;
+
+/*Remove Single page Woocommerce Hooks & Filters are below*/
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
+add_action('woocommerce_single_product_summary', 'add_custom_box_product_summary', 5);
+if (!function_exists('add_custom_box_product_summary')) {
+    function add_custom_box_product_summary() {
+        get_template_part('templates/product-single', 'summary');
+    }
+}
+
+add_action('woocommerce_cbv_releted_product', 'cbv_related_products', 5);
+if (!function_exists('cbv_related_products')) {
+    function cbv_related_products() {
+        get_template_part('templates/product-single', 'related');
+    }
+}
+
+add_filter( 'woocommerce_product_tabs', 'woo_custom_product_tabs' );
+function woo_custom_product_tabs( $tabs ) {
+
+    // 1) Removing tabs
+    unset( $tabs['description'] );              // Remove the description tab
+    unset( $tabs['reviews'] );               // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
+
+    //ACF Description tab
+    $tabs['opinion_tab'] = array(
+        'title'     => __( 'Opinion', 'woocommerce' ),
+        'priority'  => 2,
+        'callback'  => 'woo_opinion_tab_content'
+    );
+
+    $tabs['instructions_tab'] = array(
+        'title'     => __( 'Instructions', 'woocommerce' ),
+        'priority'  => 1,
+        'callback'  => 'woo_instructions_tab_content'
+    );
+    $tabs['deliveries_tab'] = array(
+        'title'     => __( 'Deliveries', 'woocommerce' ),
+        'priority'  => 4,
+        'callback'  => 'woo_deliveries_tab_content'
+    );
+
+    $tabs['waves_tab'] = array(
+        'title'     => __( 'More waves', 'woocommerce' ),
+        'priority'  => 3,
+        'callback'  => 'woo_waves_tab_content'
+    );
+    return $tabs;
+
+}
+
+// New Tab contents
+
+function woo_opinion_tab_content() {
+    global $product;
+    $opinion = get_field('opinion', $product->get_id() );
+    if( !empty($opinion) ){
+        echo '<div class="opinion-content">';
+        echo wpautop( $opinion );
+        echo '</div>';
+    }
+}
+function woo_instructions_tab_content() {
+    global $product;
+    $instructions = get_field('instructions', $product->get_id() );
+    if( !empty($instructions) ){
+        echo '<div class="instructions-content">';
+        echo wpautop( $instructions );
+        echo '</div>';
+    }
+}
+
+function woo_deliveries_tab_content() {
+    global $product;
+    $deliveries = get_field('deliveries', $product->get_id() );
+    if( !empty($deliveries) ){
+        echo '<div class="deliveries-content">';
+        echo wpautop( $deliveries );
+        echo '</div>';
+    }
+}
+function woo_waves_tab_content() {
+    global $product;
+    $more_waves = get_field('more_waves', $product->get_id() );
+    if( !empty($more_waves) ){
+        echo '<div class="more_waves-content">';
+        echo wpautop( $more_waves );
+        echo '</div>';
+    }
+}
+
+function my_woocommerce_product_single_add_to_cart_text() {
+    return 'הוסף לעגלה';
+}
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'my_woocommerce_product_single_add_to_cart_text', 20 );
+
+
+add_action('woocommerce_after_add_to_cart_quantity', 'cbv_add_wishlist_btn');
+function cbv_add_wishlist_btn(){
+    echo '<span class="controll-wishlist">';
+    echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+    echo '</span>';
+}
