@@ -22,113 +22,66 @@
   </div>
 </section>
 
+<?php 
+$query = new WP_Query(array( 
+    'post_type'=> 'product',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    'orderby' => 'rand',  
+  ) 
+);
 
+if($query->have_posts()){
+?>
 <section class="ks-grd-sec">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <div class="ks-grd-sec-inr">
           <ul class="reset-list clearfix">
+          <?php 
+          while ( $query->have_posts() ) { $query->the_post(); 
+            global $product, $woocommerce, $post; 
+            $product_image_tag = cbv_get_image_tag( get_post_thumbnail_id(get_the_ID()), 'productgrid' );
+            $label_name = get_field('label_name', get_the_ID());
+            $model = get_field('model', get_the_ID());
+
+          ?>
             <li>
               <div class="ks-grd-item">
                 <div class="ks-grd-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
+                  <a href="<?php echo get_permalink(); ?>" class="overlay-link"></a>
                   <div class="ks-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/new/prg1.jpg">
+                    <?php echo $product_image_tag; ?>
                   </div>
                 </div>
                 <div class="ks-grd-item-des">
                   <div class="ks-grd-item-des-top">
-                    <span>New</span>
+                    <?php 
+                      if( !empty($label_name) ) printf('<div class="ks-gidt-lft"><span>%s</span></div>', $label_name); 
+                      wc_stock_manage();
+                    ?>
                   </div>
                   <div class="ks-grd-item-des-btm clearfix">
                     <div class="ks-gidb-venus">
-                      <strong>Venus</strong>
-                      <span>קשת קשירה  </span>
+                      <?php if( !empty($model) ) printf('<strong>%s</strong>', $model); ?>
+                      <span><?php echo get_the_title(); ?></span>
                     </div>
                     <div class="ks-gidb-price">
-                      <span class="woocommerce-Price-amount amount">
-                        <bdi>
-                          <span class="woocommerce-Price-currencySymbol">
-                            <del> ₪365 </del>
-                          </span>
-                          <span> ₪209 </span>
-                        </bdi>
-                      </span>
+                      <?php echo $product->get_price_html(); ?>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li>
-              <div class="ks-grd-item">
-                <div class="ks-grd-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="ks-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/new/prg2.jpg">
-                  </div>
-                </div>
-                <div class="ks-grd-item-des">
-                  <div class="ks-grd-item-des-top">
-                    <span>New</span>
-                  </div>
-                  <div class="ks-grd-item-des-btm clearfix">
-                    <div class="ks-gidb-venus">
-                      <strong>Venus</strong>
-                      <span>קשת קשירה  </span>
-                    </div>
-                    <div class="ks-gidb-price">
-                      <span class="woocommerce-Price-amount amount">
-                        <bdi>
-                          <span class="woocommerce-Price-currencySymbol">
-                            <del> ₪365 </del>
-                          </span>
-                          <span> ₪209 </span>
-                        </bdi>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="ks-grd-item">
-                <div class="ks-grd-item-img-ctlr">
-                  <a href="#" class="overlay-link"></a>
-                  <div class="ks-grd-item-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/new/prg3.jpg">
-                  </div>
-                </div>
-                <div class="ks-grd-item-des">
-                  <div class="ks-grd-item-des-top">
-                    <span>New</span>
-                  </div>
-                  <div class="ks-grd-item-des-btm clearfix">
-                    <div class="ks-gidb-venus">
-                      <strong>Venus</strong>
-                      <span>קשת קשירה  </span>
-                    </div>
-                    <div class="ks-gidb-price">
-                      <span class="woocommerce-Price-amount amount">
-                        <bdi>
-                          <span class="woocommerce-Price-currencySymbol">
-                            <del> ₪365 </del>
-                          </span>
-                          <span> ₪209 </span>
-                        </bdi>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+          <?php } ?>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<?php } wp_reset_postdata();?>
 
 <section class="ks-about-sec">
   <div class="container-fluid">
