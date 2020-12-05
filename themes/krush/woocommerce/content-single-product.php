@@ -32,9 +32,9 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-<div class="product-page-cntlr">
+<div class="product-page-cntlr single-product">
   <section class="product-page-con">
-	<div class="clearfix product-page-grds-cntlr">
+	<div class="clearfix product-page-grds-cntlr split">
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.

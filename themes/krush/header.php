@@ -27,7 +27,7 @@ if( is_array($logoObj) ){
 }
 ?>
 <div class="bdoverlay"></div>
-<header class="header">
+<header class="header" data-uri="<?php echo THEME_URI; ?>">
   <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">

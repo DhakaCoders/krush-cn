@@ -23,3 +23,8 @@ https://www.msn.com/he-il?AR=2
 	text-align: left;
 	min-height: 600px;
 }
+.woocommerce div.product div.summary {
+    width: 100%;
+    max-width: 800px;
+    float: right;
+}
