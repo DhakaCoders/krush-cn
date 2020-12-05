@@ -1,7 +1,4 @@
 <?php 
-/*
-  Template Name: Policies
-*/
 get_header(); 
 while( have_posts() ): the_post();
 ?>

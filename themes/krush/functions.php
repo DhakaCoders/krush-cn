@@ -25,7 +25,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'productgrid', 426, 584, true );
         add_image_size( 'termgrid', 648, 832, true );
         add_image_size( 'productgallery', 678, 790, true );
-        //add_image_size( 'hprogrid', 364, 236, true );
+        add_image_size( 'aboutgrid', 666, 828, true );
         //add_image_size( 'hawgrid', 574, 420, true );
         
         // add size to media uploader
@@ -39,6 +39,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_theme_support( 'html5', array(
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ) );
+        //add_theme_support( 'post-formats', array( 'video' ) );
 
         register_nav_menus( array(
             'cbv_main_menu' => __( 'Main Menu', THEME_NAME ),
@@ -75,6 +76,8 @@ include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
 include_once(THEME_DIR .'/inc/wc-functions.php');
 include_once(THEME_DIR .'/inc/class-wc-cbv-attributes-widget.php');
+include_once(THEME_DIR .'/inc/post-ajax.php');
+include_once(THEME_DIR .'/inc/video-ajax.php');
 /**
 ACF Option pages->>
 */
