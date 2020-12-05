@@ -222,5 +222,19 @@ $(document).ready(function() {
   $(".fancybox").fancybox();
 });
 
-
+$('nav.main-nav ul > li.megamenu').each(function(){
+  var turi = $('header').attr('data-uri');
+  var col1 = '<div class="mega-menu-nav-col"><ul>'+$(this).find('ul.sub-menu li.col1 ul').html()+'</ul></div>';
+  var col2 = '<div class="mega-menu-nav-col"><ul>'+$(this).find('ul.sub-menu li.col2 ul').html()+'</ul></div>';
+  var output = '';
+      output += '<div class="mega-menu-cntlr"><div class="mega-menu-cntlr-inr">';
+        output += '<div class="mega-menu-nav">';
+        output += col1;
+        output += col2;
+        output += '</div>';
+        output += '<div class="mega-menu-fea-img"><img src="'+turi+'/assets/images/mega-menu-fea-img.jpg"></div>';
+      output += '</div></div>';
+  $(this).find('ul.sub-menu').remove();
+  $(this).append(output);
+});
 })(jQuery);

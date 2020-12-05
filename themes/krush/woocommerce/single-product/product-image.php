@@ -38,8 +38,31 @@ $wrapper_classes   = apply_filters(
 
 $attachment_ids = $product->get_gallery_image_ids();
 ?>
-<div class="product-page-grd-rgt">
-	<ul class="clearfix reset-list">
+<div class="product-page-grd-rgt left">
+	<div class="slideshow">
+	<?php 
+		if ( $attachment_ids && $product->get_image_id() ) {
+		$i = 1;
+		foreach ( $attachment_ids as $attachment_id ) {
+		$product_image_tag = cbv_get_image_tag( $attachment_id, 'productgallery' );
+		$product_image_url = cbv_get_image_src( $attachment_id, 'productgallery' );
+		$cls = ($i == 1)? 'main-image' : 'new-image';
+	?>
+
+        <img src="<?php echo $product_image_url; ?>" class="<?php echo $cls; ?>">
+
+	<?php	
+		$i++; }
+	}else{
+		$product_image_tag = cbv_get_image_tag( $post_thumbnail_id, 'productgallery' );
+		$product_image_url = cbv_get_image_src( $post_thumbnail_id, 'productgallery' );
+	?>
+		<img src="<?php echo $product_image_url; ?>" class="main-image">
+	<?php
+	}
+	?>		
+	</div>
+	<ul class="clearfix reset-list" style="display: none;">
 	<?php 
 		if ( $attachment_ids && $product->get_image_id() ) {
 		foreach ( $attachment_ids as $attachment_id ) {
