@@ -7,17 +7,17 @@
   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
   <?php } ?>
-  <svg style="display: none;">
-    <symbol id="close-icon-svg" xmlns="http://www.w3.org/2000/svg" width="22.886" height="30.651" viewBox="0 0 22.886 30.651">
-      <g id="x" transform="translate(-0.057 0.335)">
-        <path id="Line" d="M0,0,21.213,21.213" transform="translate(1 4)" stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-        <path id="Line_Copy" data-name="Line Copy" d="M15,0,0,25.981" transform="matrix(-0.966, -0.259, 0.259, -0.966, 15.382, 29.479)" stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-      </g>
-    </symbol>
-  </svg>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<svg style="display: none;">
+  <symbol id="close-icon-svg" xmlns="http://www.w3.org/2000/svg" width="22.886" height="30.651" viewBox="0 0 22.886 30.651">
+    <g id="x" transform="translate(-0.057 0.335)">
+      <path id="Line" d="M0,0,21.213,21.213" transform="translate(1 4)" stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Line_Copy" data-name="Line Copy" d="M15,0,0,25.981" transform="matrix(-0.966, -0.259, 0.259, -0.966, 15.382, 29.479)" stroke="#000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </symbol>
+</svg>
 <?php 
 $logoObj = get_field('hdlogo', 'options');
 if( is_array($logoObj) ){
@@ -27,7 +27,8 @@ if( is_array($logoObj) ){
 }
 ?>
 <div class="bdoverlay"></div>
-<header class="header" data-uri="<?php echo THEME_URI; ?>">
+<div class="headerCover"></div>
+<header class="header" id="site-header" data-uri="<?php echo THEME_URI; ?>">
   <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">

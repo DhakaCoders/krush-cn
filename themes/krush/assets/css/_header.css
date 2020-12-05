@@ -1,13 +1,13 @@
 .header{
-	padding: 27px 0 0;
+	padding: 27px 0 21px;
 	left: 0;
 	right: 0;
+	z-index: 99;
+	background: #fff;
 }
-.single-product .header {
-    padding: 27px 0 30px;
-    background: #fff;
-    position: relative;
-    z-index: 99;
+.headerCover{
+	height: 100px;
+	width: 100%;
 }
 #site-header{
   top: 0;
@@ -17,7 +17,7 @@
   z-index: 100;
 }
 #site-header.hide {
-  top: -80px;
+  top: -110px;
 }
 #site-header.hasbg{
 	background: #fff;

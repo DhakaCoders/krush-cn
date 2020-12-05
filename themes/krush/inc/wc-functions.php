@@ -228,7 +228,10 @@ add_filter( 'woocommerce_product_single_add_to_cart_text', 'my_woocommerce_produ
 
 add_action('woocommerce_after_add_to_cart_quantity', 'cbv_add_wishlist_btn');
 function cbv_add_wishlist_btn(){
+    global $product;
+    $pid = $product->get_id();
     echo '<span class="controll-wishlist">';
-    echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+    $shortcode = "[ti_wishlists_addtowishlist product_id='{$pid}' variation_id='0']";
+    echo do_shortcode($shortcode);
     echo '</span>';
 }

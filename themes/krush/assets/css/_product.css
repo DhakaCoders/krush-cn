@@ -140,8 +140,116 @@ body.single-product .quantity {
     top: 0;
     right: 0;
 }
-.single-product .ks-grd-sec{
+body.single-product .ks-grd-sec{
 	padding-top: 40px;
+}
+body.single-product.woo-variation-swatches.wvs-show-label form.variations_form .variations td{
+	display: table-cell;
+	padding: 5px 0;
+}
+body.single-product.woo-variation-swatches form.variations_form .variable-items-wrapper{
+	justify-content: flex-end;
+}
+body.single-product.woo-variation-swatches form.variations_form .variable-items-wrapper .variable-item:not(.radio-variable-item):last-of-type,
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item){
+	margin-right: 15px!important;
+}
+body.single-product form.variations_form td.value.woo-variation-items-wrapper{
+	text-align: left;
+}
+body.woocommerce div.product form.cart .variations td.label{
+	padding-right: 0;
+}
+body.woocommerce div.product form.cart .variations td.label label,
+body.woocommerce div.product form.cart .variations td.label span{
+	line-height: 1;
+	vertical-align: top;
+}
+.woo-variation-swatches.wvs-style-squared .variable-items-wrapper .variable-item.button-variable-item,
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item){
+	border-bottom: 1px solid transparent!important;
+}
+.woo-variation-swatches.wvs-style-squared .variable-items-wrapper .variable-item.button-variable-item span{
+	padding: 0!important;
+}
+.woo-variation-swatches.wvs-style-squared .variable-items-wrapper .variable-item.button-variable-item,
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item):hover,
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item){
+	border-radius: 0!important;
+	box-shadow: none!important;
+	padding: 0!important;
+	height: auto!important;
+	width: auto!important;
+	line-height: 1.5;
+}
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item):hover,
+.woo-variation-swatches.wvs-style-squared .variable-items-wrapper .variable-item.button-variable-item.selected,
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected{
+	border-color: #000!important;
+}
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).color-variable-item .variable-item-span-color {
+    height: 14px!important;
+    width: 14px!important;
+    border-radius: 100%!important;
+    margin: 2px 0;
+}
+.woocommerce div.product form.cart .reset_variations{
+	color: #000;
+}
+
+/**
+cart buttons
+*/
+.single_variation_wrap .woocommerce-variation-add-to-cart,
+.fl-product-summery-con form.cart{
+	position: relative;
+}
+.single_variation_wrap div.quantity{
+	display: none;
+}
+.single_variation_wrap span.controll-wishlist,
+.fl-product-summery-con form.cart span.controll-wishlist{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    text-align: center;
+    background: #f2caab!important;
+}
+.single_variation_wrap span.controll-wishlist i,
+.fl-product-summery-con form.cart span.controll-wishlist{
+	line-height: 40px;
+	font-size: 20px;
+}
+.single_variation_wrap span.controll-wishlist *,
+.fl-product-summery-con form.cart span.controll-wishlist *{
+	margin: 0;
+}
+.single_variation_wrap span.controll-wishlist .yith-wcwl-add-to-wishlist{}
+.single_variation_wrap .woocommerce-variation-add-to-cart{
+	padding-left: 50px;
+	display: flex;
+}
+.single_variation_wrap button.single_add_to_cart_button,
+.fl-product-summery-con form.cart button.single_add_to_cart_button{
+    height: 40px;
+    line-height: 40px;
+    background: #f2caab!important;
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    width: calc(100% - 50px);
+    padding: 0!important;
+    color: #000!important;
+    float: right!important;
+}
+.single_variation_wrap span.controll-wishlist .feedback{
+	text-indent: -9999px;
+}
+.single_variation_wrap span.controll-wishlist .feedback i{
+	text-indent: 9999px;
 }
 @media(max-width: 1499px){
 
