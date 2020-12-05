@@ -1,0 +1,58 @@
+2020-12-05T19:27:54+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\standard-post-ajax.php on line 64
+
+2020-12-05T19:27:56+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\standard-post-ajax.php on line 64
+
+2020-12-05T19:35:20+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:35:25+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:36:04+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:37:20+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:37:26+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:38:04+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:39:21+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:39:27+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:40:05+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:41:23+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:41:28+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:42:06+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:43:30+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:44:07+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:45:30+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:46:07+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:47:31+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:48:08+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:49:18+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:49:23+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:50:09+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:50:18+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:50:23+00:00 CRITICAL Cannot redeclare script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:5) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 18
+
+2020-12-05T19:50:54+00:00 CRITICAL Cannot redeclare ajax_script_load_more() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:72) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 153
+
+2020-12-05T19:54:58+00:00 CRITICAL Cannot redeclare ajax_enqueue_script() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:145) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 170
+
+2020-12-05T19:55:11+00:00 CRITICAL Cannot redeclare ajax_enqueue_script() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:145) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 170
+
+2020-12-05T19:55:17+00:00 CRITICAL Cannot redeclare ajax_enqueue_script() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:145) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\video-ajax.php on line 170
+
