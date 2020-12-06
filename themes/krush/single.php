@@ -6,6 +6,9 @@ $banner = get_field('banner_image', $thisID);
 $description = get_field('description', $thisID); 
 $gallery = get_field('gallery', $thisID); 
 $bannerTag = !empty($banner)? cbv_get_image_tag( $banner): '';
+
+$posttitle = get_the_title();
+$permalink = get_the_permalink();
 ?>
 <?php if( !empty($bannerTag) ): ?>
 <section class="page-banner">
@@ -41,8 +44,7 @@ $bannerTag = !empty($banner)? cbv_get_image_tag( $banner): '';
               <div class="ks-bpc-des-rgt-btm hide-md">
                 <h5 class="ks-bpc-des-rgt-btm-title"> אהבת את הכתבה  ? <br> לחי לחברה </h5>
                 <ul class="reset-list">
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Facebook</a></li>
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink; ?>">Facebook</a></li>
                   <li><a href="#">Whatsapp</a></li>
                 </ul>
               </div>
@@ -53,8 +55,7 @@ $bannerTag = !empty($banner)? cbv_get_image_tag( $banner): '';
               <div class="ks-bpc-des-rgt-btm show-md">
                 <h5 class="ks-bpc-des-rgt-btm-title"> אהבת את הכתבה  ? <br> לחי לחברה </h5>
                 <ul class="reset-list">
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Facebook</a></li>
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink; ?>">Facebook</a></li>
                   <li><a href="#">Whatsapp</a></li>
                 </ul>
               </div>
