@@ -196,4 +196,4 @@ function check_values($post_ID, $post_after, $post_before){
         }
     }
 }
-add_action( 'post_updated', 'check_values', 10, 3 );
+//add_action( 'post_updated', 'check_values', 10, 3 );
