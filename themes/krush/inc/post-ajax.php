@@ -117,7 +117,7 @@ function ajax_script_load_more($args, $catslug = '') {
                 <div class="ks-blog-grid-item-dsc">
                   <span><?php echo get_the_date('d.m.Y'); ?></span>
                   <h5 class="ks-blog-grid-item-title mHc"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                  <?php if( !empty($postexcerpt) ) echo wpautop( $postexcerpt); ?>
+                  <?php if( !empty($postexcerpt) ) echo '<div class="blog-excerpt">'. wpautop( $postexcerpt).'</div>'; ?>
                 </div>
             </div>
 	  <?php
