@@ -76,8 +76,9 @@ if( is_array($logoObj) ){
                         <div class="search-popup-con">
                           <h2>Looking for something?</h2>
                           <div class="search-popup-form">
-                            <form>
-                              <input type="search" placeholder="הקלידי שם של דגם, קולקציה, קטגוריה… ">
+                            <?php $shop_id = woocommerce_get_page_id('shop'); ?>
+                            <form action="<?php echo get_permalink($shop_id); ?>" method="get">
+                              <input type="search" placeholder=" קלידי שם של דגם, קולקציה, קטגוריה… " name="keyword" value="<?php echo get_search_query(); ?>">
                               <button> חפשי </button>
                             </form>
                           </div>

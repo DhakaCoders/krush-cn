@@ -2,7 +2,7 @@
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
-//remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
 
 add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
@@ -236,16 +236,35 @@ function cbv_add_wishlist_btn(){
     echo '</span>';
 }
 
-//add_action( 'woocommerce_product_query', 'imcar_custom_product_query' );
-function imcar_custom_product_query( $query ) {
-
-    if( ! $query->is_main_query() )
+function sm_pre_get_posts( $query ) {
+    // check if the user is requesting an admin page 
+    // or current query is not the main query
+    if ( is_admin() || ! $query->is_main_query() ){
         return;
-    $color = 'pa_חומר';
-    $query->set( 'meta_key', 'pa_'.$color );
-    $query->set( 'orderby', 'meta_value_num' );
-    $query->set( 'order', 'ASC' );
+    }
+
+    // edit the query only when post type is 'accommodation'
+    // if it isn't, return
+    if ( !is_post_type_archive( 'product' ) ){
+        return;
+    }
+    $post_type = 'product';
+    $meta_query = array();
+    $keyword = '';
+
+    if( isset($_GET['keyword']) && !empty($_GET['keyword']) ){
+        $keyword = $_GET['keyword'];
+    }
+
+    if( !empty( $keyword ) ){
+        $query->set('post_type', $post_type);
+        $query->set( 's', $keyword );
+        //$query->set( 'category_name', $keyword );
+    }
+    return $query;
+    
 }
+add_action( 'pre_get_posts', 'sm_pre_get_posts', 1 );
 
 function cw_add_postmeta_ordering_args( $args_sort_cw ) {
   $cw_orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) :
@@ -270,12 +289,12 @@ function cw_add_postmeta_ordering_args( $args_sort_cw ) {
   }
   return $args_sort_cw;
 }
-add_filter( 'woocommerce_get_catalog_ordering_args', 'cw_add_postmeta_ordering_args' );
+//add_filter( 'woocommerce_get_catalog_ordering_args', 'cw_add_postmeta_ordering_args' );
 function cw_add_new_postmeta_orderby( $sortby ) {
    $sortby['black'] = __( 'Sort By Black', 'woocommerce' );
    $sortby['red'] = __( 'Sort By Red', 'woocommerce' );
    $sortby['white'] = __( 'Sort By White', 'woocommerce' );
    return $sortby;
 }
-add_filter( 'woocommerce_default_catalog_orderby_options', 'cw_add_new_postmeta_orderby' );
-add_filter( 'woocommerce_catalog_orderby', 'cw_add_new_postmeta_orderby' );
+//add_filter( 'woocommerce_default_catalog_orderby_options', 'cw_add_new_postmeta_orderby' );
+//add_filter( 'woocommerce_catalog_orderby', 'cw_add_new_postmeta_orderby' );
