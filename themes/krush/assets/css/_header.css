@@ -250,6 +250,9 @@ nav.main-nav .main-nav-inr > ul > li.menu-item-has-children:hover .mega-menu-cnt
 	display: inline-block;
 	vertical-align: baseline;
 }
+.mega-menu-nav .mega-menu-nav-col ul li.current-menu-item a{
+	border-bottom: 1px solid #000;
+}
 .mega-menu-nav .mega-menu-nav-col ul li a:hover{
 	opacity: .6;
 }

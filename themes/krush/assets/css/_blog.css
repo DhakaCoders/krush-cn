@@ -4,7 +4,7 @@ ks-blog-grid-item-sec-wrp
 -------------------------
 */
 .ks-blog-grid-item-sec-wrp{
-	padding-top: 70px;
+	padding-top: 50px;
 	padding-bottom: 60px;
 }
 .ks-blog-grid-item-wrp ul{
@@ -15,20 +15,21 @@ ks-blog-grid-item-sec-wrp
 	width: 50%;
 	padding: 0 15px 30px;
 }
-.ks-blog-grid-item-wrp ul li:nth-child(2n+1){
-	clear: left;
+.ks-blog-grid-item-wrp .ks-blog-grid-item:nth-child(2n+1){
+	clear: right;
 }
 .ks-blog-grid-item-ctlr{
-	margin: 0 -15px;
+	margin: 0 -10px;
 	padding-bottom: 30px;
 }
 .ks-blog-grid-item{
 	width: 50%;
 	float: right;
-	padding: 0 15px;
+	padding: 0 10px;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
+	margin-bottom: 20px;
 }
 .ks-blog-grid-item-img-ctlr{
 	position: relative;
@@ -45,7 +46,7 @@ ks-blog-grid-item-sec-wrp
 .ks-blog-grid-item-dsc{
 	text-align: center;
 	background: #FFF5EA;
-	padding: 30px 10px 35px;
+	padding: 30px 20px 35px;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -66,7 +67,7 @@ ks-blog-grid-item-sec-wrp
 	font-family: 'Simpler';
 	font-style: normal;
 	color: #000000;
-	margin-bottom: 0;
+	margin-bottom: 20px;
 }
 .ks-blog-grid-item-title a{
 	text-decoration: none;
@@ -79,8 +80,8 @@ ks-blog-grid-item-sec-wrp
 	color: #ff0000;
 }
 .ks-blog-grid-item-dsc .blog-excerpt{
-	padding-top: 30px;
-	height: 30px;
+	padding-top: 0;
+	height: 0;
 	overflow: hidden;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
@@ -92,14 +93,12 @@ ks-blog-grid-item-sec-wrp
 	margin-bottom: 0;
 	margin-top: 0;
 	line-height: 1.5;
-	display: none;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.ks-blog-grid-item:hover .ks-blog-grid-item-dsc p{
-	opacity: 1;
-	display: block;
+.ks-blog-grid-item:hover .blog-excerpt{
+	height: 40px;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
