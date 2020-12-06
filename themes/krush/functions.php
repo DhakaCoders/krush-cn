@@ -26,7 +26,7 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'termgrid', 648, 832, true );
         add_image_size( 'productgallery', 678, 790, true );
         add_image_size( 'aboutgrid', 666, 828, true );
-        //add_image_size( 'hawgrid', 574, 420, true );
+        add_image_size( 'hintrogrid', 866, 582, true );
         
         // add size to media uploader
         add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );
@@ -179,3 +179,21 @@ function printr($args){
     print_r ($args);
     echo '</pre>';
 }
+
+function check_values($post_ID, $post_after, $post_before){
+    global $wpdb;
+    $all_attributes = $wpdb->get_results("
+       SELECT wp_terms.name
+       from wp_term_relationships
+          join wp_terms on wp_term_relationships.term_taxonomy_id = wp_terms.term_id
+          join wp_term_taxonomy on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id
+       WHERE wp_term_relationships.object_id = $post_ID
+    ", ARRAY_A);
+    foreach( $all_attributes as $all_attribute){
+        if($all_attribute['name'] !='variable'){
+            $strtolower = strtolower($all_attribute['name']);
+            update_post_meta( $post_ID, '_sorting_'.$strtolower, $all_attribute['name'] );
+        }
+    }
+}
+add_action( 'post_updated', 'check_values', 10, 3 );
