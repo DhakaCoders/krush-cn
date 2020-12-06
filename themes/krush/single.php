@@ -45,7 +45,7 @@ $permalink = get_the_permalink();
                 <h5 class="ks-bpc-des-rgt-btm-title"> אהבת את הכתבה  ? <br> לחי לחברה </h5>
                 <ul class="reset-list">
                   <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink; ?>">Facebook</a></li>
-                  <li><a href="#">Whatsapp</a></li>
+                  <li><a href="https://wa.me/?text=<?php echo $permalink; ?>">Whatsapp</a></li>
                 </ul>
               </div>
             </div>
@@ -56,7 +56,7 @@ $permalink = get_the_permalink();
                 <h5 class="ks-bpc-des-rgt-btm-title"> אהבת את הכתבה  ? <br> לחי לחברה </h5>
                 <ul class="reset-list">
                   <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $permalink; ?>">Facebook</a></li>
-                  <li><a href="#">Whatsapp</a></li>
+                  <li><a href="https://wa.me/?text=<?php echo $permalink; ?>">Whatsapp</a></li>
                 </ul>
               </div>
             </div>
