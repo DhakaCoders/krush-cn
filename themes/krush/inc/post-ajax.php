@@ -57,7 +57,7 @@ function cbv_load_more_a($args, $catslug = '') {
                 $output .='<div class="ks-blog-grid-item-dsc">';
                   $output .='<span>'.get_the_date('d.m.Y').'</span>';
                   $output .='<h5 class="ks-blog-grid-item-title mHc"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5>';
-                  if( !empty($postexcerpt) ) $output .= wpautop( $postexcerpt);
+                  if( !empty($postexcerpt) ) $output .= '<div class="blog-excerpt">'.wpautop( $postexcerpt).'</div>';
                 $output .='</div>';
             $output .='</div>';
          endwhile; 
