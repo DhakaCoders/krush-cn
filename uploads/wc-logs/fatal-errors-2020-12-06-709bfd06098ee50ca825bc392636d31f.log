@@ -1,0 +1,6 @@
+2020-12-06T14:27:01+00:00 CRITICAL syntax error, unexpected ''order'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\front-page.php on line 58
+
+2020-12-06T17:49:00+00:00 CRITICAL syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\functions.php on line 194
+
+2020-12-06T18:07:40+00:00 CRITICAL syntax error, unexpected '$slug' (T_VARIABLE), expecting case (T_CASE) or default (T_DEFAULT) or '}' in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\wc-functions.php on line 256
+
