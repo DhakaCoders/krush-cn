@@ -217,6 +217,7 @@ cart buttons
     font-size: 20px;
     text-align: center;
     background: #f2caab!important;
+    transition: all 0.3s;
 }
 .single_variation_wrap span.controll-wishlist i,
 .fl-product-summery-con form.cart span.controll-wishlist{
@@ -244,12 +245,29 @@ cart buttons
     padding: 0!important;
     color: #000!important;
     float: right!important;
+    transition: all 0.3s;
+}
+.single_variation_wrap button.single_add_to_cart_button:hover,
+.fl-product-summery-con form.cart button.single_add_to_cart_button:hover,
+.single_variation_wrap span.controll-wishlist:hover, 
+.fl-product-summery-con form.cart span.controll-wishlist:hover{
+	background: #ddb697!important;
 }
 .single_variation_wrap span.controll-wishlist .feedback{
 	text-indent: -9999px;
 }
 .single_variation_wrap span.controll-wishlist .feedback i{
 	text-indent: 9999px;
+}
+.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span{
+	padding: 5px 10px;
+	color: #000;
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus, 
+.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    background: #f2caab;
+    color: #fff;
 }
 @media(max-width: 1499px){
 

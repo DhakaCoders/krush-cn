@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section class="home-page-banner">
-  <img src="<?php echo THEME_URI; ?>/assets/images/new/banner1.jpg">
+  <img src="<?php echo THEME_URI; ?>/assets/images/main-banner.jpg">
 </section>
 
 <section class="krushbox-fea-quick-sec">

@@ -48,10 +48,11 @@
 }
 .ks-pro-btm-grd ul li{
 	float: right;
-	width: 33.3333%;
-	padding-left: 8px;
-	padding-right: 8px;
-	padding-bottom: 16px;
+	width: 33.3333%!important;
+	padding-left: 8px!important;
+	padding-right: 8px!important;
+	padding-bottom: 16px!important;
+	margin: 0!important;
 }
 .ks-pro-btm-grd ul li:nth-child(3n+1){
 	clear: right;
