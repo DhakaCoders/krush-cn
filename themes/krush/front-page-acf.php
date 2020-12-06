@@ -1,35 +1,64 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+$banner = get_field('banner_image', HOMEID);
+$bannerTag = !empty($banner)? cbv_get_image_tag( $banner): '';
+?>
+<?php if( !empty($bannerTag) ): ?>
 <section class="home-page-banner">
-  <img src="<?php echo THEME_URI; ?>/assets/images/main-banner.jpg">
+  <?php echo $bannerTag; ?>
 </section>
+<?php endif; ?>
 
+<?php 
+$intro = get_field('introsec', HOMEID);
+if( $intro ):
+?>
 <section class="krushbox-fea-quick-sec">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <div class="krushbox-fea-quick-sec-inr clearfix">
           <div class="krushbox-fea-quick-des">
-            <h3 class="kfqd-title">KrushBox</h3>
-            <p>גלי את מועדון החברות החדש של  <br>קראש , מנוי חודשי בו תקבלי בכל  <br>חודש פריט חדש </p>
-            <a href="#">הצטרפי עכשיו</a>
+          <?php 
+            if( !empty($intro['title']) ) printf('<h3 class="kfqd-title">%s</h3>', $intro['title']);
+            if( !empty($intro['description']) ) echo wpautop( $intro['description'] );
+            $hlink = $intro['link'];
+            if( is_array( $hlink ) &&  !empty( $hlink['url'] ) ){
+                printf('<a href="%s" target="%s">%s</a>', $hlink['url'], $hlink['target'], $hlink['title']); 
+            }
+            $introImgTag = !empty($intro['image'])? cbv_get_image_tag( $intro['image'], 'hintrogrid' ):'';
+          ?>
           </div>
           <div class="krushbox-fea-quick-img">
-            <img src="<?php echo THEME_URI; ?>/assets/images/new/hgrid1.jpg">
+            <?php echo $introImgTag; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<?php endif; ?>
 <?php 
-$query = new WP_Query(array( 
-    'post_type'=> 'product',
-    'post_status' => 'publish',
-    'posts_per_page' => 3,
-    'orderby' => 'rand',  
-  ) 
-);
+$productIDs = get_field('select_products', HOMEID);
+if($productIDs){
+  $query = new WP_Query(array( 
+      'post_type'=> 'product',
+      'post_status' => 'publish',
+      'posts_per_page' => count($productIDs),
+      'post__in' => $productIDs,
+      'orderby' => 'rand',  
+    ) 
+  );
+}else{
+  $query = new WP_Query(array( 
+      'post_type'=> 'product',
+      'post_status' => 'publish',
+      'posts_per_page' => 3,
+      'orderby' => 'date',
+      'order'=> 'DESC',
+    ) 
+  );
+}
 
 if($query->have_posts()){
 ?>
