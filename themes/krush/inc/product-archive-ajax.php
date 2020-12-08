@@ -53,7 +53,7 @@ function cbv_load_more_arvhice_product($args, $catslug = '') {
 		    $output .='<div class="ks-grd-item-des-top">';
 		       
 		        if( !empty($label_name) ) $output .='<div class="ks-gidt-lft"><span>'.$label_name.'</span></div>'; 
-		        wc_stock_manage();
+		    $output .= wc_the_stock_manage();
 		    $output .='</div>';
 		    $output .='<div class="ks-grd-item-des-btm clearfix">';
 		      $output .='<div class="ks-gidb-venus">';
@@ -69,7 +69,7 @@ function cbv_load_more_arvhice_product($args, $catslug = '') {
 	    $output .='</li>';
 	 endwhile; 
     else:
-    	echo '<div class="no-resuts">No Results.</div>';
+    	echo '<div class="no-resuts"><p>No more products.</p></div>';
     endif;  
     wp_reset_postdata();
     return $output;

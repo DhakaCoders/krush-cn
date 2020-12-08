@@ -182,7 +182,7 @@ function cbv_load_more_all_product($args) {
 		$i++;
 	 endwhile; 
     else:
-    	echo '<div class="no-resuts">No Results.</div>';
+    	echo '<div class="no-resuts"><p>No more products.</p></div>';
     endif;  
     wp_reset_postdata();
     return $output;
