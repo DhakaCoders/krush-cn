@@ -78,6 +78,8 @@ include_once(THEME_DIR .'/inc/wc-functions.php');
 include_once(THEME_DIR .'/inc/class-wc-cbv-attributes-widget.php');
 include_once(THEME_DIR .'/inc/post-ajax.php');
 include_once(THEME_DIR .'/inc/video-ajax.php');
+include_once(THEME_DIR .'/inc/product-archive-ajax.php');
+include_once(THEME_DIR .'/inc/product-cat-ajax.php');
 /**
 ACF Option pages->>
 */
@@ -179,21 +181,3 @@ function printr($args){
     print_r ($args);
     echo '</pre>';
 }
-
-function check_values($post_ID, $post_after, $post_before){
-    global $wpdb;
-    $all_attributes = $wpdb->get_results("
-       SELECT wp_terms.name
-       from wp_term_relationships
-          join wp_terms on wp_term_relationships.term_taxonomy_id = wp_terms.term_id
-          join wp_term_taxonomy on wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id
-       WHERE wp_term_relationships.object_id = $post_ID
-    ", ARRAY_A);
-    foreach( $all_attributes as $all_attribute){
-        if($all_attribute['name'] !='variable'){
-            $strtolower = strtolower($all_attribute['name']);
-            update_post_meta( $post_ID, '_sorting_'.$strtolower, $all_attribute['name'] );
-        }
-    }
-}
-//add_action( 'post_updated', 'check_values', 10, 3 );

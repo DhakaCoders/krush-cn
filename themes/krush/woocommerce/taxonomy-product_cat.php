@@ -25,7 +25,7 @@ get_header( 'shop' );
 			<div class="col-md-12">
 				<div class="ks-pro-grd-sec-inr">
 					<?php get_template_part('templates/shop', 'header-top'); ?>
-					<?php echo do_shortcode('[products_archive]'); ?>
+					<?php echo do_shortcode('[products_cat]'); ?>
 				</div>
 			</div>
 		</div>

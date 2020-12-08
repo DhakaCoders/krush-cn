@@ -5,9 +5,9 @@ remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 
 
-add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
-add_action('woocommerce_after_main_content', 'get_custom_wc_output_content_wrapper_end', 9);
-add_filter( 'woocommerce_show_page_title', '__return_false' );
+//add_action('woocommerce_before_main_content', 'get_custom_wc_output_content_wrapper', 11);
+//add_action('woocommerce_after_main_content', 'get_custom_wc_output_content_wrapper_end', 9);
+//add_filter( 'woocommerce_show_page_title', '__return_false' );
 function get_custom_wc_output_content_wrapper(){
 
     if(is_shop() OR is_product_category()){ 
@@ -265,36 +265,3 @@ function sm_pre_get_posts( $query ) {
     
 }
 add_action( 'pre_get_posts', 'sm_pre_get_posts', 1 );
-
-function cw_add_postmeta_ordering_args( $args_sort_cw ) {
-  $cw_orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) :
-        apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
-        $slug = '_sorting_'.strtolower($cw_orderby_value);
-  switch( $cw_orderby_value ) {
-    case 'black':
-        $args_sort_cw['orderby'] = 'meta_value_num';
-        $args_sort_cw['order'] = 'desc';
-        $args_sort_cw[$slug] = 'black';
-    break;
-    case 'red':
-        $args_sort_cw['orderby'] = 'meta_value_num';
-        $args_sort_cw['order'] = 'desc';
-        $args_sort_cw[$slug] = $cw_orderby_value;
-    break;
-    case 'white':
-        $args['orderby'] = 'rand';
-        $args['order'] = '';
-        $args['meta_key'] = '';
-    break;
-  }
-  return $args_sort_cw;
-}
-//add_filter( 'woocommerce_get_catalog_ordering_args', 'cw_add_postmeta_ordering_args' );
-function cw_add_new_postmeta_orderby( $sortby ) {
-   $sortby['black'] = __( 'Sort By Black', 'woocommerce' );
-   $sortby['red'] = __( 'Sort By Red', 'woocommerce' );
-   $sortby['white'] = __( 'Sort By White', 'woocommerce' );
-   return $sortby;
-}
-//add_filter( 'woocommerce_default_catalog_orderby_options', 'cw_add_new_postmeta_orderby' );
-//add_filter( 'woocommerce_catalog_orderby', 'cw_add_new_postmeta_orderby' );

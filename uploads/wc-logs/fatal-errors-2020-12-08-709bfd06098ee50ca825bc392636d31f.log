@@ -1,0 +1,2 @@
+2020-12-08T10:18:25+00:00 CRITICAL Cannot redeclare ajax_enqueue_script() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:145) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\product-archive-ajax.php on line 153
+
