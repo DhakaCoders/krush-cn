@@ -27,6 +27,9 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'productgallery', 678, 790, true );
         add_image_size( 'aboutgrid', 666, 828, true );
         add_image_size( 'hintrogrid', 866, 582, true );
+
+        add_image_size( 'proall_868_750', 868, 750, true );
+        add_image_size( 'proall_426_368', 426, 368, true );
         
         // add size to media uploader
         add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );
@@ -80,6 +83,7 @@ include_once(THEME_DIR .'/inc/post-ajax.php');
 include_once(THEME_DIR .'/inc/video-ajax.php');
 include_once(THEME_DIR .'/inc/product-archive-ajax.php');
 include_once(THEME_DIR .'/inc/product-cat-ajax.php');
+include_once(THEME_DIR .'/inc/all-product-ajax.php');
 /**
 ACF Option pages->>
 */

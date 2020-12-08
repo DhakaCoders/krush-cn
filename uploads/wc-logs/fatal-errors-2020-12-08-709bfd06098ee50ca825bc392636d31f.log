@@ -1,2 +1,54 @@
 2020-12-08T10:18:25+00:00 CRITICAL Cannot redeclare ajax_enqueue_script() (previously declared in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\post-ajax.php:145) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\product-archive-ajax.php on line 153
 
+2020-12-08T14:37:26+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:38:49+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:39:26+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:41:26+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:43:27+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:45:28+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:47:29+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:49:29+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:51:30+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:53:31+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:55:31+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:57:32+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T14:59:33+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:01:34+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:03:35+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:05:35+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:07:37+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:09:36+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:11:38+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:13:38+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:15:38+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:17:38+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:19:40+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:19:45+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 74
+
+2020-12-08T15:20:52+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 73
+
+2020-12-08T17:01:53+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in C:\xampp\htdocs\2020\12\krush\krush-cn\themes\krush\inc\all-product-ajax.php on line 103
+

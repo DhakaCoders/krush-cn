@@ -174,4 +174,48 @@ if($('#cat_page_count').length){
 	}
 	});
 }
+
+if($('#allproducts_page_count').length){
+	var allProCanBeLoaded = true; // this param allows to initiate the AJAX call only if necessary
+	var allProBottomOffset = 800; // the distance (in px) from the page bottom when you want to load more posts
+
+	$(window).scroll(function(){
+	if( $(document).scrollTop() > ( $(document).height() - allProBottomOffset ) && allProCanBeLoaded == true ){
+		//init
+		var products = $('#allproducts_page_count');
+		var page5 = products.data('page5');
+		var newPage5 = page5 + 1;
+		var ajaxurl = products.data('url');
+		var countPro = parseInt(products.text());
+		products.text(countPro+9);
+		$.ajax({
+		    url: ajaxurl,
+		    type: 'post',
+		    data: {
+		        page: page5,
+		        countPro: countPro,
+		        action: 'ajax_load_more_all_product'
+		
+		    },
+		    beforeSend: function ( xhr ) {
+		      $('#ajxaloader5').show();
+		      allProCanBeLoaded = false; 
+		    },
+		    error: function(response) {
+		        console.log(response);
+		    },
+			success:function(response){
+		        if (response == 0) {
+		            $('#ajxaloader5').hide();
+		        } else {
+		            $('#ajxaloader5').hide();
+		            products.data('page5', newPage5);
+		            $('#all_product').append(response.substr(response.length-1, 1) === '0'? response.substr(0, response.length-1) : response);
+		        	allProCanBeLoaded = true;
+		        }
+			}
+		});
+	}
+	});
+}
 })(jQuery);
