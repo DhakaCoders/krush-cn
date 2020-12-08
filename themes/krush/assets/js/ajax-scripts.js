@@ -119,6 +119,7 @@ if($('#page_count').length){
 		    },
 			success:function(response){
 		        if (response == 0) {
+		        	$('#archive-products').append('<div class="clearfix"></div><div class="text-center"><p>No more products to load.</p></div>');
 		            $('#ajxaloader3').hide();
 		        } else {
 		            $('#ajxaloader3').hide();
@@ -162,6 +163,7 @@ if($('#cat_page_count').length){
 		    },
 			success:function(response){
 		        if (response == 0) {
+		        	$('#cat-products').append('<div class="clearfix"></div><div class="text-center"><p>No more products to load.</p></div>');
 		            $('#ajxaloader4').hide();
 		        } else {
 		            $('#ajxaloader4').hide();
@@ -206,6 +208,7 @@ if($('#allproducts_page_count').length){
 		    },
 			success:function(response){
 		        if (response == 0) {
+		        	$('#all_product').append('<div class="clearfix"></div><div class="text-center"><p>No more products to load.</p></div>');
 		            $('#ajxaloader5').hide();
 		        } else {
 		            $('#ajxaloader5').hide();

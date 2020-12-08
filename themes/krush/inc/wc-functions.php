@@ -86,6 +86,25 @@ function wc_stock_manage(){
     } 
 }
 
+function wc_the_stock_manage(){
+    global $product;
+    $StockQ = $product->get_stock_quantity();
+    $output = '';
+    if ( ! $product->managing_stock() && ! $product->is_in_stock() ){
+        $output .= '<div class="ks-gidt-rgt"><span class="out-of-stock">Out of Stock</span></div>';
+        
+    } elseif( $StockQ < 1 ) {
+        if ($product->backorders_allowed()){
+            $output .= '<div class="ks-gidt-rgt"><span class="backorders">Available on Backorder</span></div>';
+        } elseif ( !$product->backorders_allowed() && $StockQ == 0 && ! $product->is_in_stock()){
+            $output .= '<div class="ks-gidt-rgt"><span class="out-of-stock">Out of Stock</span></div>';
+        } elseif ( $product->is_on_backorder() ){
+            $output .= '<div class="ks-gidt-rgt"><span class="backorders">Available on Backorder</span></div>';
+        }
+    } 
+    return $output;
+}
+
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 
 function new_loop_shop_per_page( $cols ) {
