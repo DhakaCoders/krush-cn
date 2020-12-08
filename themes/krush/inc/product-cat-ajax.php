@@ -76,6 +76,7 @@ function cbv_load_more_cat_product($args, $term_id = '') {
 	    $output .='</li>';
 	 endwhile; 
     else:
+    	echo '<div class="no-resuts">No Results.</div>';
     endif;  
     wp_reset_postdata();
     return $output;

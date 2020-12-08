@@ -69,6 +69,7 @@ function cbv_load_more_arvhice_product($args, $catslug = '') {
 	    $output .='</li>';
 	 endwhile; 
     else:
+    	echo '<div class="no-resuts">No Results.</div>';
     endif;  
     wp_reset_postdata();
     return $output;
