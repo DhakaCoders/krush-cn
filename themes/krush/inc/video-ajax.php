@@ -35,46 +35,47 @@ function cbv_load_more_video($args, $catslug = '') {
 	);
 	$output = '';
 
-      if($query->have_posts()): 
-          
-	  
-          while($query->have_posts()): $query->the_post(); 
-            $posterID = get_field('poster', get_the_ID());
-          	$video_url = get_field('video_url', get_the_ID());
-            $image_src = wp_get_attachment_image_src( $posterID, 'postgrid');
-            if( !empty( $image_src[0] ) ){
-              $gridImgSrc = $image_src[0];
-            }else{
-              $gridImgSrc = '';
-            }
+  if($query->have_posts()): 
+      
 
-              $output .='<li>';
-                $output .='<div class="ks-blog-video-grid">';
-                  $output .='<div class="ks-blog-video-grid-img-ctlr">';
-                    if( !empty($video_url) ):
-                    $output .='<a class="overlay-link" data-fancybox href="'.$video_url.'"></a>';
-                    endif;
-                    $output .='<div class="ks-blog-video-grid-img">';
-                      $output .='<img src="'. $gridImgSrc.'" alt="'.get_the_title().'">';
-                    $output .='</div>';
-                    if( !empty($video_url) ):
-                      $output .='<span class="ks-blog-video-play-cntlr">';
-                        $output .='<i>
-                          <svg class="ks-blg-video-play-hover-svg" width="40" height="40" viewBox="0 0 40 40" fill="#fff">
-                          <use xlink:href="#ks-blg-video-play-hover-svg"></use>
-                         </svg>
-                        </i>';
-                      $output .='</span>';
-                    endif;
-                  $output .='</div>';
-                  $output .='<div class="ks-blog-video-grid-dsc">';
-                    $output .='<h5 class="ks-blog-vd-grid-title mHc"><a href="#">'.get_the_title().'</a></h5>';
-                  $output .='</div>';
-                $output .='</div>';
-              $output .='</li>';
+    while($query->have_posts()): $query->the_post(); 
+        $posterID = get_field('poster', get_the_ID());
+      	$video_url = get_field('video_url', get_the_ID());
+        $image_src = wp_get_attachment_image_src( $posterID, 'postgrid');
+        if( !empty( $image_src[0] ) ){
+          $gridImgSrc = $image_src[0];
+        }else{
+          $gridImgSrc = '';
+        }
 
-         endwhile; 
-        endif;  
+        $output .='<li>';
+          $output .='<div class="ks-blog-video-grid">';
+            $output .='<div class="ks-blog-video-grid-img-ctlr">';
+              if( !empty($video_url) ):
+              $output .='<a class="overlay-link" data-fancybox href="'.$video_url.'"></a>';
+              endif;
+              $output .='<div class="ks-blog-video-grid-img">';
+                $output .='<img src="'. $gridImgSrc.'" alt="'.get_the_title().'">';
+              $output .='</div>';
+              if( !empty($video_url) ):
+                $output .='<span class="ks-blog-video-play-cntlr">';
+                  $output .='<i>
+                    <svg class="ks-blg-video-play-hover-svg" width="40" height="40" viewBox="0 0 40 40" fill="#fff">
+                    <use xlink:href="#ks-blg-video-play-hover-svg"></use>
+                   </svg>
+                  </i>';
+                $output .='</span>';
+              endif;
+            $output .='</div>';
+            $output .='<div class="ks-blog-video-grid-dsc">';
+              $output .='<h5 class="ks-blog-vd-grid-title mHc"><a href="#">'.get_the_title().'</a></h5>';
+            $output .='</div>';
+          $output .='</div>';
+        $output .='</li>';
+    endwhile; 
+    else:
+      echo '<div class="no-resuts">No Results.</div>';
+    endif;  
     wp_reset_postdata();
     return $output;
 }

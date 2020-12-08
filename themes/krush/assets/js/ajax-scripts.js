@@ -1,18 +1,12 @@
 (function($) {
 var num_1 = $("#ajax-post #ajax-content").find("div.ks-blog-grid-item").length;
-if ( num_1 <= 0 ) {
-  $("#cbv-ajax-btn-1").hide();
-  $("#ajax-post div.ks-blog-grid-item-wrp").html('<div class="no-results"><p>No Results.</p></div>');
-}else if(  num_1 < 4 ){
+if(  num_1 < 4 ){
 	$("#cbv-ajax-btn-1").hide();	
 }
 
 // for video
 var num_2 = $("#video-post #ajax-content2").find("li").length;
-if ( num_2 <= 0 ) {
-  $("#cbv-ajax-btn-2").hide();
-  $("#video-post #video-post-wrapp").html('<div class="no-results"><p>No Results.</p></div>');
-}else if(  num_2 < 4 ){
+if(  num_2 < 4 ){
 	$("#cbv-ajax-btn-2").hide();	
 }
 

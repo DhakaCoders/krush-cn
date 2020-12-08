@@ -35,33 +35,33 @@ function cbv_load_more_a($args, $catslug = '') {
 	);
 	$output = '';
 
-      if($query->have_posts()): 
-          
-	  
-          while($query->have_posts()): $query->the_post(); 
-          	$postexcerpt = get_field('postexcerpt', get_the_ID());
-          	$thumbnailID = get_field('post_thumbnail', get_the_ID());
-            $image_src = wp_get_attachment_image_src( $thumbnailID, 'postgrid');
-            if( !empty( $image_src[0] ) ){
-              $spnewsimg = $image_src[0];
-            }else{
-              $spnewsimg = '';
-            }
-			$output .='<div class="ks-blog-grid-item">';
-                $output .='<div class="ks-blog-grid-item-img-ctlr">';
-                  $output .='<a href="'.get_the_permalink().'" class="overlay-link"></a>';
-                  $output .='<div class="ks-blog-grid-item-img">';
-                    $output .='<img loading="lazy" src="'. $spnewsimg.'" alt="'.get_the_title().'">';
-                  $output .='</div>';
-                $output .='</div>';
-                $output .='<div class="ks-blog-grid-item-dsc">';
-                  $output .='<span>'.get_the_date('d.m.Y').'</span>';
-                  $output .='<h5 class="ks-blog-grid-item-title mHc"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5>';
-                  if( !empty($postexcerpt) ) $output .= '<div class="blog-excerpt">'.wpautop( $postexcerpt).'</div>';
-                $output .='</div>';
-            $output .='</div>';
-         endwhile; 
-        endif;  
+  if($query->have_posts()): 
+      while($query->have_posts()): $query->the_post(); 
+      	$postexcerpt = get_field('postexcerpt', get_the_ID());
+      	$thumbnailID = get_field('post_thumbnail', get_the_ID());
+        $image_src = wp_get_attachment_image_src( $thumbnailID, 'postgrid');
+        if( !empty( $image_src[0] ) ){
+          $spnewsimg = $image_src[0];
+        }else{
+          $spnewsimg = '';
+        }
+        $output .='<div class="ks-blog-grid-item">';
+        $output .='<div class="ks-blog-grid-item-img-ctlr">';
+          $output .='<a href="'.get_the_permalink().'" class="overlay-link"></a>';
+          $output .='<div class="ks-blog-grid-item-img">';
+            $output .='<img loading="lazy" src="'. $spnewsimg.'" alt="'.get_the_title().'">';
+          $output .='</div>';
+        $output .='</div>';
+        $output .='<div class="ks-blog-grid-item-dsc">';
+          $output .='<span>'.get_the_date('d.m.Y').'</span>';
+          $output .='<h5 class="ks-blog-grid-item-title mHc"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5>';
+          if( !empty($postexcerpt) ) $output .= '<div class="blog-excerpt">'.wpautop( $postexcerpt).'</div>';
+        $output .='</div>';
+        $output .='</div>';
+     endwhile; 
+    else:
+      echo '<div class="no-resuts">No Results.</div>';
+    endif;  
     wp_reset_postdata();
     return $output;
 }
