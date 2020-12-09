@@ -313,7 +313,13 @@ input.select2-search__field{
 	margin-left: 0!important;
 	text-transform: capitalize!important;
 }
-
+.woocommerce .tinv-wishlist .tinvwl_added_to_wishlist.tinv-modal button.button{
+	padding-bottom: 12px!important;
+}
+#tinvwl_product_actions:focus{
+	box-shadow: none!important;
+	outline: none!important;
+}
 table.tinvwl-table-manage-list {
     border: 1px solid rgba(0,0,0,.1);
     margin: 0 -1px 24px 0;
