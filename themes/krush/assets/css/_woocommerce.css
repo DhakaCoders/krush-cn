@@ -105,7 +105,14 @@ body.single-product .pro-cart-btn button:hover svg{
     margin-bottom: 10px;
     display: inline-block;
 }
-
+.woocommerce-info a,
+a.woocommerce-privacy-policy-link{
+	color: #000;
+}
+.woocommerce-info a:hover,
+a.woocommerce-privacy-policy-link:hover{
+	opacity: .8;
+}
 .woocommerce .woocommerce-NoticeGroup{
 	margin-bottom: 20px;
 }
@@ -160,9 +167,9 @@ body.woocommerce-account #customer_login .u-column2.col-2 > h2{
 	box-sizing: border-box;
 	padding: 5px 18px 5px;
 	color: #ACABAB;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 16px;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.1;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -295,7 +302,7 @@ input.select2-search__field{
 	content: none!important;
 }
 .tinv-header h2{
-	font-size: 2.1428em;
+	font-size: 2em;
 }
 .woocommerce-billing-fields h3,
 .woocommerce-additional-fields h3,
@@ -338,6 +345,43 @@ table.tinvwl-table-manage-list td {
     vertical-align: middle;
     line-height: 1.5em;
 }
+.select2-container .select2-selection--single .select2-selection__rendered{
+	width: 100%;
+}
+
+
+@media(max-width: 1399px){
+	.woocommerce-billing-fields h3, 
+	.woocommerce-additional-fields h3, 
+	.checkout #order_review_heading {
+	    font-size: 2em;
+	}
+}
+
+@media(max-width: 1199px){
+	.woocommerce-billing-fields h3, .woocommerce-additional-fields h3, .checkout #order_review_heading {
+	    font-size: 1.7em;
+	}
+}
+@media(max-width: 1024px){
+	.tinvwl-to-left.look_in{
+		max-width: 500px!important;
+		width: 100%!important;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: flex-end;
+		display: flex;
+	}
+	.tinvwl-to-left.look_in .tinvwl-input-group.tinvwl-no-full{
+		width: 100%;
+		margin: 0;
+	}
+	.tinv-wishlist tfoot .tinvwl-to-right{
+		text-align: right;
+	}
+}
+
+
 
 @media(max-width: 991px){
 	.woocommerce #customer_details .col-1,
@@ -352,6 +396,11 @@ table.tinvwl-table-manage-list td {
 	.woocommerce form .form-row label {
         font-size: 16px;
     }
+    .woocommerce-billing-fields h3, 
+	.woocommerce-additional-fields h3, 
+	.checkout #order_review_heading {
+	    font-size: 1.5em;
+	}
 }
 @media(max-width: 768px){
 	body.woocommerce-cart .default-page-con,
@@ -400,6 +449,12 @@ table.tinvwl-table-manage-list td {
     .woocommerce #coupon_code{
         width: 160px;
     }
+    .tinv-wishlist.woocommerce.tinv-wishlist-clear{
+    	padding-top: 30px;
+    }
+    .tinv-header h2 {
+	    font-size: 1.7em;
+	}
 }
 @media(max-width: 420px){
 	.woocommerce #coupon_code{

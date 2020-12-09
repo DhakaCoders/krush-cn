@@ -238,7 +238,19 @@ form .bootstrap-select button{
 	border: 0;
 	color: #710023;
 	text-transform: uppercase;
-	font-size: 16px;
+	font-size: .8em;
+	border: 1px solid #000!important;
+	display: flex;
+	align-items: center;
+}
+.bootstrap-select .dropdown-toggle .filter-option{
+	display: flex;
+	align-items: center;
+	padding-right: 40px;
+}
+.bootstrap-select .dropdown-toggle .filter-option .filter-option-inner{
+	padding-right: 0;
+	color: #000;
 }
 form .bootstrap-select .caret{
 	border: 0;
@@ -255,7 +267,7 @@ form .bootstrap-select .caret{
 .dropdown-toggle{
 	position: relative;
 	background: transparent!important;
-	min-height: 40px;
+	min-height: 37px;
 }
 .dropdown-toggle::after{
 	content: none;
@@ -266,7 +278,7 @@ form .bootstrap-select .caret{
     font-weight: 600;
     text-decoration: inherit;
     color: #1E1E1E;
-    font-size: 22px;
+    font-size: 1.5em;
     padding-right: 0;
     position: absolute;
     top: 50%;
@@ -326,7 +338,7 @@ form .dropdown-menu li a{
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:focus, 
 .dropdown-menu>.active>a:hover{
-	background-color: #F3BF00;
+	background-color: #000;
 }
 
 .bootstrap-select .dropdown-toggle:focus{
@@ -338,4 +350,6 @@ form .dropdown-menu li a{
 }
 .dropdown-menu.show{
 	width: 100%;
+	font-size: .8em;
+	text-align: right;
 }
