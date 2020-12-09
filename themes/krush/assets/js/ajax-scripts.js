@@ -97,7 +97,9 @@ if($('#page_count').length){
 	$(window).scroll(function(){
 	if( $(document).scrollTop() > ( $(document).height() - bottomOffset ) && canBeLoaded == true ){
 		//init
-
+		var term_color = $('#ajax-archive').data('color');
+		var term_material = $('#ajax-archive').data('material');
+		var term_width = $('#ajax-archive').data('width');
 		var archive = $('#page_count');
 		var page3 = archive.data('page3');
 		var newPage3 = page3 + 1;
@@ -107,6 +109,9 @@ if($('#page_count').length){
 		    type: 'post',
 		    data: {
 		        page: page3,
+		        pa_color: term_color,
+		        pa_material: term_material,
+		        pa_width: term_width,
 		        action: 'ajax_load_more_archive_product'
 		
 		    },
@@ -141,6 +146,9 @@ if($('#cat_page_count').length){
 	if( $(document).scrollTop() > ( $(document).height() - catBottomOffset ) && catCanBeLoaded == true ){
 		//init
 		var term_id = $('#ajax-cat').data('cat_id');
+		var term_color_1 = $('#ajax-cat').data('color');
+		var term_material_1 = $('#ajax-cat').data('material');
+		var term_width_1 = $('#ajax-cat').data('width');
 		var cat = $('#cat_page_count');
 		var page4 = cat.data('page4');
 		var newPage4 = page4 + 1;
@@ -151,6 +159,9 @@ if($('#cat_page_count').length){
 		    data: {
 		        page: page4,
 		        term_id: term_id,
+		        pa_color: term_color_1,
+		        pa_material: term_material_1,
+		        pa_width: term_width_1,
 		        action: 'ajax_load_more_cat_product'
 		
 		    },
@@ -184,6 +195,10 @@ if($('#allproducts_page_count').length){
 	$(window).scroll(function(){
 	if( $(document).scrollTop() > ( $(document).height() - allProBottomOffset ) && allProCanBeLoaded == true ){
 		//init
+		var allpro_color = $('#ajax-all_product').data('color');
+		var allpro_material = $('#ajax-all_product').data('material');
+		var allpro_width = $('#ajax-all_product').data('width');
+
 		var products = $('#allproducts_page_count');
 		var page5 = products.data('page5');
 		var newPage5 = page5 + 1;
@@ -196,6 +211,9 @@ if($('#allproducts_page_count').length){
 		    data: {
 		        page: page5,
 		        countPro: countPro,
+			    pa_color: allpro_color,
+		        pa_material: allpro_material,
+		        pa_width: allpro_width,
 		        action: 'ajax_load_more_all_product'
 		
 		    },

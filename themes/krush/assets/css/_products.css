@@ -122,11 +122,11 @@
 ul.woocommerce-widget-layered-nav-list .count {
     display: none;
 }
-.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item {
+.woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item {
     display: inline-block;
     margin-right: 14px;
 }
-.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item a .attribute-type{
+.woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item a .attribute-type{
 	display: inline-block;
 	width: 12px;
 	height: 12px;
@@ -135,10 +135,10 @@ ul.woocommerce-widget-layered-nav-list .count {
     white-space: nowrap;
     overflow: hidden;
 }
-.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a{
+.woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a{
 	position: relative;
 }
-.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a::before{
+.woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item--chosen a::before{
     position: absolute;
     left: 0;
     bottom: 0;

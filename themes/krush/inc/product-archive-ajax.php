@@ -3,10 +3,13 @@
  * initial products dispaly
  */
 function script_load_more_archive($args = array()) {
-$output = '';
-	$output .='<div class="ks-pro-btm-grd" id="ajax-archive">';
+	$color_filter = isset( $_GET['filter_color'] ) ? $_GET['filter_color'] : '';
+	$material_filter = isset( $_GET['filter_material'] ) ? $_GET['filter_material'] : '';
+	$width_filter = isset( $_GET['filter_width'] ) ? $_GET['filter_width'] : '';
+    $output = '';
+	$output .='<div class="ks-pro-btm-grd" id="ajax-archive" data-color="'.$color_filter.'" data-material="'.$material_filter.'" data-width="'.$width_filter.'">';
     $output .='<ul class="reset-list clearfix" id="archive-products">';
-		$output .= cbv_load_more_arvhice_product($args);
+		$output .= cbv_load_more_arvhice_product($args, $color_filter, $material_filter, $width_filter);
     $output .= '</ul>';
        
 	$output .='<div class="ks-loadmore-btn" id="cbv-ajax-btn-3">
@@ -21,8 +24,40 @@ return $output;
  */
 add_shortcode('products_archive', 'script_load_more_archive');
 
-function cbv_load_more_arvhice_product($args, $catslug = '') {
-	
+function cbv_load_more_arvhice_product($args, $color = '', $material='', $width = '') {
+	$tax = '';
+	$color = (isset( $color ) && !empty( $color ) )? explode( ',', wc_clean( wp_unslash( $color ) ) ) : '';
+	$material = (isset( $material ) && !empty( $material ) )? explode( ',', wc_clean( wp_unslash( $material ) ) ) : '';
+	$width = (isset( $width ) && !empty( $width ) )? explode( ',', wc_clean( wp_unslash( $width ) ) ) : '';
+	if( !empty($color) && !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width)
+			);
+	}elseif( !empty($color) && !empty($material) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material)
+			);
+	}elseif( !empty($color) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width)
+			);
+	}elseif( !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+			array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width)
+		);
+	}elseif( !empty($color) ){
+		$tax = array(array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color));
+	}elseif( !empty($material) ){
+		$tax = array(array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material));
+	}elseif( !empty($width) ){
+		$tax = array(array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width));
+	}
+
 	//number of products per page default
 	$num = 4;
 	//page number
@@ -30,7 +65,8 @@ function cbv_load_more_arvhice_product($args, $catslug = '') {
 	    'post_type'=> 'product',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
-	    'order'=> 'DESC'
+	    'order'=> 'DESC',
+	    'tax_query' => $tax
 	  ) 
 	);
 	$output = '';
@@ -78,7 +114,7 @@ function cbv_load_more_arvhice_product($args, $catslug = '') {
 /*
  * load more script call back
  */
-function ajax_load_more_archive_product($args, $catslug = '') {
+function ajax_load_more_archive_product($args, $color = '') {
 	//init ajax
 	$ajax = false;
 	//check ajax call or not
@@ -86,7 +122,7 @@ function ajax_load_more_archive_product($args, $catslug = '') {
 	strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
 	$ajax = true;
 	}
-	
+	$tax = '';
 	//number of posts per page default
 	$num = 4;
 	//page number
@@ -95,12 +131,47 @@ function ajax_load_more_archive_product($args, $catslug = '') {
 	}else{
 		$paged = 1;
 	}
+	$color = (isset( $_POST['pa_color'] ) && !empty( $_POST['pa_color'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_color'] ) ) ) : '';
+	$material = (isset( $_POST['pa_material'] ) && !empty( $_POST['pa_material'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_material'] ) ) ) : '';
+	$width = (isset( $_POST['pa_width'] ) && !empty( $_POST['pa_width'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_width'] ) ) ) : '';
+
+	
+	if( !empty($color) && !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width)
+			);
+	}elseif( !empty($color) && !empty($material) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material)
+			);
+	}elseif( !empty($color) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width)
+			);
+	}elseif( !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+			array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width)
+		);
+	}elseif( !empty($color) ){
+		$tax = array(array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color));
+	}elseif( !empty($material) ){
+		$tax = array(array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material));
+	}elseif( !empty($width) ){
+		$tax = array(array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width));
+	}
+	
 	$query = new WP_Query(array( 
 	    'post_type'=> 'product',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
 	    'paged'=>$paged,
-	    'order'=> 'DESC'
+	    'order'=> 'DESC',
+	    'tax_query' => $tax
 	  ) 
 	);
 
