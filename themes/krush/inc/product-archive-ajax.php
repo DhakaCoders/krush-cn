@@ -6,10 +6,12 @@ function script_load_more_archive($args = array()) {
 	$color_filter = isset( $_GET['filter_color'] ) ? $_GET['filter_color'] : '';
 	$material_filter = isset( $_GET['filter_material'] ) ? $_GET['filter_material'] : '';
 	$width_filter = isset( $_GET['filter_width'] ) ? $_GET['filter_width'] : '';
+	$keyword = isset( $_GET['keyword'] ) ? wc_clean( wp_unslash($_GET['keyword'])) : '';
+
     $output = '';
-	$output .='<div class="ks-pro-btm-grd" id="ajax-archive" data-color="'.$color_filter.'" data-material="'.$material_filter.'" data-width="'.$width_filter.'">';
+	$output .='<div class="ks-pro-btm-grd" id="ajax-archive" data-color="'.$color_filter.'" data-material="'.$material_filter.'" data-width="'.$width_filter.'" keyword="'.$keyword.'">';
     $output .='<ul class="reset-list clearfix" id="archive-products">';
-		$output .= cbv_load_more_arvhice_product($args, $color_filter, $material_filter, $width_filter);
+		$output .= cbv_load_more_arvhice_product($args, $color_filter, $material_filter, $width_filter, $keyword);
     $output .= '</ul>';
        
 	$output .='<div class="ks-loadmore-btn" id="cbv-ajax-btn-3">
@@ -24,7 +26,7 @@ return $output;
  */
 add_shortcode('products_archive', 'script_load_more_archive');
 
-function cbv_load_more_arvhice_product($args, $color = '', $material='', $width = '') {
+function cbv_load_more_arvhice_product($args, $color = '', $material='', $width = '', $keyword='') {
 	$tax = '';
 	$color = (isset( $color ) && !empty( $color ) )? explode( ',', wc_clean( wp_unslash( $color ) ) ) : '';
 	$material = (isset( $material ) && !empty( $material ) )? explode( ',', wc_clean( wp_unslash( $material ) ) ) : '';
@@ -65,6 +67,7 @@ function cbv_load_more_arvhice_product($args, $color = '', $material='', $width 
 	    'post_type'=> 'product',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
+	    's' => $keyword,
 	    'order'=> 'DESC',
 	    'tax_query' => $tax
 	  ) 
@@ -134,6 +137,7 @@ function ajax_load_more_archive_product($args, $color = '') {
 	$color = (isset( $_POST['pa_color'] ) && !empty( $_POST['pa_color'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_color'] ) ) ) : '';
 	$material = (isset( $_POST['pa_material'] ) && !empty( $_POST['pa_material'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_material'] ) ) ) : '';
 	$width = (isset( $_POST['pa_width'] ) && !empty( $_POST['pa_width'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_width'] ) ) ) : '';
+	$keyword = (isset( $_POST['keyword'] ) && !empty( $_POST['keyword'] ) )?   wc_clean( wp_unslash( $_POST['keyword'] ) ) : '';
 
 	
 	if( !empty($color) && !empty($material) && !empty($width) ){
@@ -169,6 +173,7 @@ function ajax_load_more_archive_product($args, $color = '') {
 	    'post_type'=> 'product',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
+	    's' => $keyword,
 	    'paged'=>$paged,
 	    'order'=> 'DESC',
 	    'tax_query' => $tax

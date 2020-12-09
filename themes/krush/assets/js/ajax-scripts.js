@@ -100,6 +100,7 @@ if($('#page_count').length){
 		var term_color = $('#ajax-archive').data('color');
 		var term_material = $('#ajax-archive').data('material');
 		var term_width = $('#ajax-archive').data('width');
+		var keyword = $('#ajax-archive').data('keyword');
 		var archive = $('#page_count');
 		var page3 = archive.data('page3');
 		var newPage3 = page3 + 1;
@@ -112,6 +113,7 @@ if($('#page_count').length){
 		        pa_color: term_color,
 		        pa_material: term_material,
 		        pa_width: term_width,
+		        keyword: keyword,
 		        action: 'ajax_load_more_archive_product'
 		
 		    },
