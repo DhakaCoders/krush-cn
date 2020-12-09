@@ -96,6 +96,8 @@ body.single-product .pro-cart-btn button:hover svg{
     padding-left: 45px;
     padding-right: 20px;
     font-size: 16px;
+    position: relative;
+    z-index: 5;
 }
 .woocommerce .woocommerce-info span,
 .woocommerce .woocommerce-error span,
@@ -294,6 +296,15 @@ input.select2-search__field{
 }
 .tinv-header h2{
 	font-size: 2.1428em;
+}
+.woocommerce-billing-fields h3,
+.woocommerce-additional-fields h3,
+.checkout #order_review_heading{
+	font-size: 2.1428em;
+}
+.checkout.woocommerce-checkout{
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 .tinv-wishlist .product-action button.button{
 	font-size: .7em!important;
