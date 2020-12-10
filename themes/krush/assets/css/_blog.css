@@ -297,6 +297,18 @@ ks-blog-grid-item-sec-wrp
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.ks-blog-grid-item-dsc .blog-excerpt{
+		display: block!important;
+		overflow: initial;
+		height: auto;
+	}
+	body.blog .ks-blog-grid-item{
+		max-width: 450px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		float: none;
+	}
 
 }
 

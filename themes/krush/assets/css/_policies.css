@@ -1,6 +1,7 @@
 .article-wrap{
   padding-bottom: 0;
   min-height: 550px;
+  padding-bottom: 30px;
 }
 
 .article-inner {

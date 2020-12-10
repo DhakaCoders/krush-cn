@@ -1,3 +1,11 @@
+.xoo-wsc-basket{
+	bottom: 120px;
+}
+
+.xoo-wsc-modal.xoo-wsc-cart-active .xoo-wsc-basket{
+	bottom: 30px;
+}
+
 .cbv_cart {
     max-width: 320px;
 }
@@ -96,7 +104,9 @@ span.xoo-wsc-smr-del:hover,
 	    font-weight: 600!important;
 	    float: right!important;
 	}
-
+	.xoo-wsc-basket {
+	    bottom: 20px;
+	}
 }
 
 @media(max-width: 575px){

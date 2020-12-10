@@ -65,7 +65,27 @@ body.single-product .pro-cart-btn button:hover svg{
     border: 2px solid #3f3f3f!important;
     padding: 5px 10px;
     height: 52px;
+    color: #000;
 }
+
+.woocommerce #coupon_code::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  opacity: 1;
+}
+.woocommerce #coupon_code::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+  opacity: 1;
+}
+.woocommerce #coupon_code:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  opacity: 1;
+}
+.woocommerce #coupon_code:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+  opacity: 1;
+}
+
+
 
 .woocommerce .woocommerce-notices-wrapper ul{
 	margin: 0;
