@@ -6,6 +6,7 @@ ul.woocommerce-error,
 	list-style: none;
 }
 .reset-list li,
+.about-grid-desc ul li,
 .woocommerce-checkout-payment ul li,
 ul.select2-results__options li,
 ul.woocommerce-error li,
@@ -16,6 +17,7 @@ ul.woocommerce-error li,
 	margin: 0;
 }
 .reset-list li:before,
+.about-grid-desc ul li:before,
 .woocommerce-checkout-payment ul li:before,
 ul.select2-results__options li:before,
 ul.woocommerce-error li:before,

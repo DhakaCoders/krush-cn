@@ -37,6 +37,7 @@ $("#loadMore").on('click', function(e) {
 	    success: function(response) {
 	        //check
 	        if (response == 0) {
+	        	$('#ajax-content').append('<div class="clearfix"></div><div class="text-center"><p>No more posts to load.</p></div>');
 	            $('#ajxaloader1').hide();
 	            $('#loadMore').hide();
 	        } else {
@@ -78,6 +79,7 @@ $("#videoLoadMore").on('click', function(e) {
 	    success: function(response) {
 	        //check
 	        if (response == 0) {
+	        	$('#ajax-content2').append('<div class="clearfix"></div><div class="text-center"><p>No more video to load.</p></div>');
 	            $('#videoLoadMore').hide();
 	            $('#ajxaloader2').hide();
 	        } else {
