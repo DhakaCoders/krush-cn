@@ -319,6 +319,25 @@ cart buttons
 	.fl-product-summery-con {
 	    padding-bottom: 70px;
 	}
+	.product-page-grd-rgt.left{
+		display: none!important;
+	}
+	.product-page-grd-lft{
+		width: 100%;
+	}
+	.woocommerce div.product div.summary{
+		float: none!important;
+		max-width: 420px!important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.tabs.wc-tabs{
+		margin-left: 0!important;
+		padding-left: 0!important;
+	}
+	.product-page-grd-lft .woocommerce-tabs {
+	    padding-bottom: 50px;
+	}
 }
 
 @media(max-width: 767px){
@@ -333,6 +352,7 @@ cart buttons
 	    margin-left: auto;
 	    margin-right: auto;
 	}
+
 }
 
 @media(max-width: 575px){
@@ -340,10 +360,22 @@ cart buttons
 	.fl-product-summery-hdr .product_title {
 	    font-size: 2.5em;
 	}
+	.single_variation_wrap button.single_add_to_cart_button, 
+	.fl-product-summery-con form.cart button.single_add_to_cart_button{
+		line-height: 1.2!important;
+	}
 }
 
 @media(max-width: 479px){
-
+	.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	    padding: 0 10px;
+	    margin-bottom: 5px;
+	}
+	.woocommerce div.product .woocommerce-tabs ul.tabs{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 
 }
 
