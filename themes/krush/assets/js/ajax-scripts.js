@@ -205,14 +205,11 @@ if($('#allproducts_page_count').length){
 		var page5 = products.data('page5');
 		var newPage5 = page5 + 1;
 		var ajaxurl = products.data('url');
-		var countPro = parseInt(products.text());
-		products.text(countPro+9);
 		$.ajax({
 		    url: ajaxurl,
 		    type: 'post',
 		    data: {
 		        page: page5,
-		        countPro: countPro,
 			    pa_color: allpro_color,
 		        pa_material: allpro_material,
 		        pa_width: allpro_width,
