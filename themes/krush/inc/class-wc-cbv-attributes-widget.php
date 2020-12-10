@@ -153,7 +153,7 @@ class cbv_wc_attribute_widget extends WC_Widget {
 	 * @param array $instance Instance.
 	 */
 	public function widget( $args, $instance ) {
-		if ( ! is_shop() && ! is_product_taxonomy() && !is_page('product-all')  ) {
+		if ( ! is_shop() && ! is_product_taxonomy() && !is_page_template( 'page-product-all.php' ) ) {
 			return;
 		}
 
