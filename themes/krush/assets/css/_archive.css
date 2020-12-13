@@ -47,6 +47,9 @@ body.archive .sidebar-widget h4{
 .shop-widgets{
 	width: 100%;
 }
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).color-variable-item .variable-item-span-color:after{
+	box-shadow: none!important;
+}
 @media(min-width: 1600px){
 
 }
@@ -103,7 +106,6 @@ body.archive .sidebar-widget h4{
 @media(max-width: 479px){
 	body.archive .sidebar-widget {
 	    width: 100%;
-	    padding-bottom: 30px;
 	}
 	body.archive .sidebar-widget h4 {
 	    margin-bottom: 10px;
