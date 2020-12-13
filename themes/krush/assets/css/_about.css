@@ -157,6 +157,21 @@
 	.about-grid-lft-img-rt-desc .about-grid-desc-cntlr{
 		order: initial;
 	}
+	.about-grid-desc ul{
+		margin: 0!important;
+		padding: 0!important;
+		list-style: none!important;
+	}
+	.about-grid-desc ul li{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		margin: 0;
+	}
+	.about-grid-desc ul li:before,
+	.about-grid-desc ul li:before{
+		content: none!important;
+	}
 }
 @media(max-width: 639px){
 

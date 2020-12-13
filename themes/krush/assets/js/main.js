@@ -237,4 +237,10 @@ $('nav.main-nav ul > li.megamenu').each(function(){
   $(this).find('ul.sub-menu').remove();
   $(this).append(output);
 });
+
+
+
+$('select.tinvwl-break-input-filed').addClass('selectpicker');
+
+
 })(jQuery);

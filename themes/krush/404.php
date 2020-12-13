@@ -7,7 +7,7 @@ get_header();
             <div class="col-sm-12">
                 <div class="page-404  text-center">
                     <h1>404</h1>
-                    <h3>Het lijkt erop dat er niets is gevonden op deze locatie.</h3>
+                    <h3>נראה כי לא נמצא דבר במיקום זה.</h3>
                 </div>
             </div>
         </div><!-- end of .newsarea -->

@@ -37,6 +37,7 @@ $("#loadMore").on('click', function(e) {
 	    success: function(response) {
 	        //check
 	        if (response == 0) {
+	        	$('#ajax-content').append('<div class="clearfix"></div><div class="text-center"><p>No more posts to load.</p></div>');
 	            $('#ajxaloader1').hide();
 	            $('#loadMore').hide();
 	        } else {
@@ -78,6 +79,7 @@ $("#videoLoadMore").on('click', function(e) {
 	    success: function(response) {
 	        //check
 	        if (response == 0) {
+	        	$('#ajax-content2').append('<div class="clearfix"></div><div class="text-center"><p>No more video to load.</p></div>');
 	            $('#videoLoadMore').hide();
 	            $('#ajxaloader2').hide();
 	        } else {
@@ -97,7 +99,10 @@ if($('#page_count').length){
 	$(window).scroll(function(){
 	if( $(document).scrollTop() > ( $(document).height() - bottomOffset ) && canBeLoaded == true ){
 		//init
-
+		var term_color = $('#ajax-archive').data('color');
+		var term_material = $('#ajax-archive').data('material');
+		var term_width = $('#ajax-archive').data('width');
+		var keyword = $('#ajax-archive').data('keyword');
 		var archive = $('#page_count');
 		var page3 = archive.data('page3');
 		var newPage3 = page3 + 1;
@@ -107,6 +112,10 @@ if($('#page_count').length){
 		    type: 'post',
 		    data: {
 		        page: page3,
+		        pa_color: term_color,
+		        pa_material: term_material,
+		        pa_width: term_width,
+		        keyword: keyword,
 		        action: 'ajax_load_more_archive_product'
 		
 		    },
@@ -141,6 +150,9 @@ if($('#cat_page_count').length){
 	if( $(document).scrollTop() > ( $(document).height() - catBottomOffset ) && catCanBeLoaded == true ){
 		//init
 		var term_id = $('#ajax-cat').data('cat_id');
+		var term_color_1 = $('#ajax-cat').data('color');
+		var term_material_1 = $('#ajax-cat').data('material');
+		var term_width_1 = $('#ajax-cat').data('width');
 		var cat = $('#cat_page_count');
 		var page4 = cat.data('page4');
 		var newPage4 = page4 + 1;
@@ -151,6 +163,9 @@ if($('#cat_page_count').length){
 		    data: {
 		        page: page4,
 		        term_id: term_id,
+		        pa_color: term_color_1,
+		        pa_material: term_material_1,
+		        pa_width: term_width_1,
 		        action: 'ajax_load_more_cat_product'
 		
 		    },
@@ -184,18 +199,22 @@ if($('#allproducts_page_count').length){
 	$(window).scroll(function(){
 	if( $(document).scrollTop() > ( $(document).height() - allProBottomOffset ) && allProCanBeLoaded == true ){
 		//init
+		var allpro_color = $('#ajax-all_product').data('color');
+		var allpro_material = $('#ajax-all_product').data('material');
+		var allpro_width = $('#ajax-all_product').data('width');
+
 		var products = $('#allproducts_page_count');
 		var page5 = products.data('page5');
 		var newPage5 = page5 + 1;
 		var ajaxurl = products.data('url');
-		var countPro = parseInt(products.text());
-		products.text(countPro+9);
 		$.ajax({
 		    url: ajaxurl,
 		    type: 'post',
 		    data: {
 		        page: page5,
-		        countPro: countPro,
+			    pa_color: allpro_color,
+		        pa_material: allpro_material,
+		        pa_width: allpro_width,
 		        action: 'ajax_load_more_all_product'
 		
 		    },

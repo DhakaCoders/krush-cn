@@ -4,10 +4,13 @@
  */
 function script_load_more_cat($args = array()) {
 	$term = get_queried_object();
+    $color_filter = isset( $_GET['filter_color'] ) ? $_GET['filter_color'] : '';
+	$material_filter = isset( $_GET['filter_material'] ) ? $_GET['filter_material'] : '';
+	$width_filter = isset( $_GET['filter_width'] ) ? $_GET['filter_width'] : '';
 $output = '';
-	$output .='<div class="ks-pro-btm-grd" id="ajax-cat" data-cat_id="'.$term->term_id.'">';
+	$output .='<div class="ks-pro-btm-grd" id="ajax-cat" data-cat_id="'.$term->term_id.'" data-color="'.$color_filter.'" data-material="'.$material_filter.'" data-width="'.$width_filter.'">';
     $output .='<ul class="reset-list clearfix" id="cat-products">';
-		$output .= cbv_load_more_cat_product($args, $term->term_id);
+		$output .= cbv_load_more_cat_product($args, $term->term_id, $color_filter, $material_filter, $width_filter);
     $output .= '</ul>';
        
 	$output .='<div class="ks-loadmore-btn" id="cbv-ajax-btn-4">
@@ -22,7 +25,54 @@ return $output;
  */
 add_shortcode('products_cat', 'script_load_more_cat');
 
-function cbv_load_more_cat_product($args, $term_id = '') {
+function cbv_load_more_cat_product($args, $term_id = '', $color = '', $material='', $width = '') {
+	$tax = '';
+	$color = (isset( $color ) && !empty( $color ) )? explode( ',', wc_clean( wp_unslash( $color ) ) ) : '';
+	$material = (isset( $material ) && !empty( $material ) )? explode( ',', wc_clean( wp_unslash( $material ) ) ) : '';
+	$width = (isset( $width ) && !empty( $width ) )? explode( ',', wc_clean( wp_unslash( $width ) ) ) : '';
+	if( !empty($color) && !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+				array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+			);
+	}elseif( !empty($color) && !empty($material) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+				array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+			);
+	}elseif( !empty($color) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+				array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+			);
+	}elseif( !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+			array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}elseif( !empty($color) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}elseif( !empty($material) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}elseif( !empty($width) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}else{
+		$tax = array(array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id));
+	}
 	//number of products per page default
 	$num = 4;
 	//page number
@@ -31,13 +81,7 @@ function cbv_load_more_cat_product($args, $term_id = '') {
 	    'post_status' => 'publish',
 	    'posts_per_page' => $num,
 	    'order'=> 'DESC',
-	    'tax_query' => array(
-	    	array(
-	    		'taxonomy' => 'product_cat',
-	            'field'    => 'term_id',
-	            'terms'    => $term_id,
-	    	)
-	    )
+	    'tax_query' => $tax
 	  ) 
 	);
 	$output = '';
@@ -94,6 +138,7 @@ function ajax_load_more_cat_product($args, $term_id = '') {
 	$ajax = true;
 	}
 	
+    $tax = '';
 	//number of posts per page default
 	$num = 4;
 	//page number
@@ -105,19 +150,63 @@ function ajax_load_more_cat_product($args, $term_id = '') {
 	if( isset($_POST['term_id']) && !empty($_POST['term_id']) ){
 		$term_id = $_POST['term_id'];
 	}
+	
+	$color = (isset( $_POST['pa_color'] ) && !empty( $_POST['pa_color'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_color'] ) ) ) : '';
+	$material = (isset( $_POST['pa_material'] ) && !empty( $_POST['pa_material'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_material'] ) ) ) : '';
+	$width = (isset( $_POST['pa_width'] ) && !empty( $_POST['pa_width'] ) )?   explode( ',', wc_clean( wp_unslash( $_POST['pa_width'] ) ) ) : '';
+	
+	if( !empty($color) && !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+				array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+			);
+	}elseif( !empty($color) && !empty($material) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+				array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+			);
+	}elseif( !empty($color) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+				array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+				array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+				array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+			);
+	}elseif( !empty($material) && !empty($width) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+			array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}elseif( !empty($color) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_color','field' => 'slug','terms' => $color),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+
+	}elseif( !empty($material) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_material','field' => 'slug','terms' => $material),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}elseif( !empty($width) ){
+		$tax = array('relation' => 'AND',
+			array('taxonomy' => 'pa_width','field' => 'slug','terms' => $width),
+			array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id)
+		);
+	}else{
+		$tax = array(array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id));
+	}
+
 	$query = new WP_Query(array( 
 	    'post_type'=> 'product',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
 	    'paged'=>$paged,
 	    'order'=> 'DESC',
-	    'tax_query' => array(
-	    	array(
-	    		'taxonomy' => 'product_cat',
-	            'field'    => 'term_id',
-	            'terms'    => $term_id,
-	    	)
-	    )
+	    'tax_query' => $tax
 	  ) 
 	);
 

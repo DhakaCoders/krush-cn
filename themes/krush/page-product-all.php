@@ -8,6 +8,9 @@ get_header();
       <div class="col-md-12">
         <div class="ks-pro-grd-entry-hdr ltr">
           <h2 class="ks-pgeh-title"> סדר לפי   </h2>
+          <?php 
+          dynamic_sidebar('shop-widget');
+          ?>
         </div>
       </div>
     </div>
