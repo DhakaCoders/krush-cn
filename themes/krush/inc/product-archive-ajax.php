@@ -6,10 +6,10 @@ function script_load_more_archive($args = array()) {
 	$color_filter = isset( $_GET['filter_color'] ) ? $_GET['filter_color'] : '';
 	$material_filter = isset( $_GET['filter_material'] ) ? $_GET['filter_material'] : '';
 	$width_filter = isset( $_GET['filter_width'] ) ? $_GET['filter_width'] : '';
-	$keyword = isset( $_GET['keyword'] ) ? wc_clean( wp_unslash($_GET['keyword'])) : '';
+	$keyword = isset( $_GET['keyword'] ) ? $_GET['keyword'] : '';
 
     $output = '';
-	$output .='<div class="ks-pro-btm-grd" id="ajax-archive" data-color="'.$color_filter.'" data-material="'.$material_filter.'" data-width="'.$width_filter.'" keyword="'.$keyword.'">';
+	$output .='<div class="ks-pro-btm-grd" id="ajax-archive" data-color="'.$color_filter.'" data-material="'.$material_filter.'" data-width="'.$width_filter.'" data-keyword="'.$keyword.'">';
     $output .='<ul class="reset-list clearfix" id="archive-products">';
 		$output .= cbv_load_more_arvhice_product($args, $color_filter, $material_filter, $width_filter, $keyword);
     $output .= '</ul>';
