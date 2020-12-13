@@ -11,7 +11,7 @@
       <div class="col-sm-12">
           <div class="ftr-cols">
             <div class="ftr-col ftr-col-1">
-              <h6>ממדיניות  </h6>
+              <h6>מדיניות</h6>
               <?php 
                 $fmenuOptions = array( 
                     'theme_location' => 'cbv_ft_menu', 
@@ -23,7 +23,7 @@
               ?>
             </div>
             <div class="ftr-col contact-us-col ftr-col-2">
-              <h6>מצור קשר  <h6>
+              <h6>צור קשר<h6>
               <ul class="reset-list">
                 <?php 
                   if( !empty($email) ) printf('<li><a href="mailto:%s">%s</a></li>', $email, 'e-mail');
@@ -36,8 +36,8 @@
             <div class="ftr-col ftr-col-3">
               <div class="ftr-newsletter-form">
                 <form>
-                  <input type="email" name="" placeholder="צטרפי לניוזלטר ">
-                  <button>ה  שלחי </button>
+                  <input type="email" name="" placeholder="הצטרפי לניוזלטר">
+                  <button>שלחי</button>
                 </form>
               </div>
               <div class="copyright-text ltr">
