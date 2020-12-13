@@ -74,7 +74,7 @@ function cbv_load_more_cat_product($args, $term_id = '', $color = '', $material=
 		$tax = array(array('taxonomy' => 'product_cat','field' => 'term_id','terms' => $term_id));
 	}
 	//number of products per page default
-	$num = 4;
+	$num = 3;
 	//page number
 	$query = new WP_Query(array( 
 	    'post_type'=> 'product',
@@ -140,7 +140,7 @@ function ajax_load_more_cat_product($args, $term_id = '') {
 	
     $tax = '';
 	//number of posts per page default
-	$num = 4;
+	$num = 3;
 	//page number
 	if( isset($_POST['page']) ){
 		$paged = $_POST['page'] + 1;

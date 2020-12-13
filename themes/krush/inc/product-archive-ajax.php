@@ -61,7 +61,7 @@ function cbv_load_more_arvhice_product($args, $color = '', $material='', $width 
 	}
 
 	//number of products per page default
-	$num = 4;
+	$num = 3;
 	//page number
 	$query = new WP_Query(array( 
 	    'post_type'=> 'product',
@@ -127,7 +127,7 @@ function ajax_load_more_archive_product($args, $color = '') {
 	}
 	$tax = '';
 	//number of posts per page default
-	$num = 4;
+	$num = 3;
 	//page number
 	if( isset($_POST['page']) ){
 		$paged = $_POST['page'] + 1;

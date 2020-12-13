@@ -101,7 +101,9 @@
 	margin-right: auto;
 	padding-right: 10px;
 }
-
+.ks-gidb-price del{
+	padding-left: 8px; 
+}
 .ks-gidb-venus strong{
 	display: inline-block !important;
 	vertical-align: baseline;
@@ -109,13 +111,23 @@
 	font-family: 'Palatino-BoldItalic';
 	margin-left: 4px;
 }
-.woocommerce-Price-amount bdi{
-	font-size: 0.8571em;
-	text-align: right;
-	direction: rtl;
+.ks-gidb-venus span{
+	font-weight: 500;
+}
+.woocommerce-Price-amount bdi {
+    font-size: 0.8571em;
+    text-align: right;
+    direction: rtl;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.ks-gidb-price del,
+.price del,
+.fl-product-summery-hdr del{
+	text-decoration: line-through;
 }
 .woocommerce-Price-amount bdi span{
-	margin-right: 8px;
+	margin-right: 0;
 }
 .woocommerce-Price-amount bdi span del{
 	display: inline-block;

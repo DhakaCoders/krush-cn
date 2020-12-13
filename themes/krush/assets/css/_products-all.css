@@ -50,8 +50,10 @@
 	width: 100%;
 }
 .thubnail-grd-big-img img{
-	display: none;
 	width: 100%;
+}
+.thubnail-grd-img-mdul-cntlr .inline-bg{
+	background: none;
 }
 .two-grd-img-mdul{
 	display: flex;
@@ -109,7 +111,9 @@
 	margin-bottom: 26px;
 }
 
-
+.thubnail-grd-big-img-col{
+	height: auto!important;
+}
 
 @media(min-width: 1600px){
 	
@@ -120,7 +124,7 @@
 
 @media(max-width: 1600px){
 	.thubnail-grd-big-img-col{
-		height: 800px;
+		height: auto;
 	}
 }
 @media(max-width: 1499px){
