@@ -13,6 +13,9 @@ body.archive .ks-pro-grd-entry-hdr{
 body.archive .sidebar-widget ul li a{
 	color: #000;
 }
+body.archive .sidebar-widget ul li a:hover{
+	text-decoration: underline;
+}
 body.archive .ks-pro-grd-entry-hdr {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +24,7 @@ body.archive .ks-pgeh-title{
 	width: 100%;
 	font-size: 1em;
 	font-weight: 700;
+	cursor: pointer;
 }
 
 body.archive .sidebar-widget{

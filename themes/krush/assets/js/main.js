@@ -243,4 +243,10 @@ $('nav.main-nav ul > li.megamenu').each(function(){
 $('select.tinvwl-break-input-filed').addClass('selectpicker');
 
 
+$('.ks-pgeh-title').on('click', function(){
+  $('.shop-widgets').slideToggle(300);
+});
+  
+
+
 })(jQuery);
