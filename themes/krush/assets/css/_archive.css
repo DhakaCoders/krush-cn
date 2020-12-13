@@ -40,6 +40,9 @@ body.archive .sidebar-widget h4{
 .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item{
 	margin-bottom: 5px;
 }
+.shop-widgets{
+	width: 100%;
+}
 @media(min-width: 1600px){
 
 }

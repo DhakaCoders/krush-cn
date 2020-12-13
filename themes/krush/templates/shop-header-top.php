@@ -1,6 +1,8 @@
 <div class="ks-pro-grd-entry-hdr ltr">
   <h2 class="ks-pgeh-title">סדר לפי </h2>
-  <?php dynamic_sidebar('shop-widget'); ?>
+  <div class="shop-widgets">
+    <?php dynamic_sidebar('shop-widget'); ?>
+  </div>
 </div>
 <?php 
 if( is_product_category() ){  
