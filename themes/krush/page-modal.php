@@ -3,20 +3,20 @@
 get_header(); 
 ?>
 
+
+
+
+
 <section class="modal-section">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="modal-sec">
-          <ul class="reset-list" style="text-align: center;">
-            <li style="display: inline-block; vertical-align: baseline; margin: 20px;">
-              <button data-toggle="modal" data-target="#ftws-modal-02">First time with us? 2</button>
-            </li>
-            <li style="display: inline-block; vertical-align: baseline; margin: 20px;">
-              <button data-toggle="modal" data-target="#ftwsModal01">First time with us? 1</button>
-            </li>
+          <div class="reset-list" style="text-align: center;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ftwsmodal02">Popup 2</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ftwsModal01">Popup 1</button>
 
-          </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -25,14 +25,16 @@ get_header();
 
 
 
-<div class="modal fade ftws-modal-cntlr" id="ftws-modal-02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+
+
+
+<div class="modal fade  ftws-modal-cntlr" id="ftwsmodal02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
-
-          <div class="ftws-modal-con ftws-modal-con-2">
+        <div class="ftws-modal-con ftws-modal-con-2">
             <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true"></span>
+              <span aria-hidden="true"><img src="<?php echo THEME_URI;?>/assets/images/close.png"></span>
             </button>
             <div class="ftws-modal-con-img">
               <div style="background: url(<?php echo THEME_URI;?>/assets/images/pop-up-2.png);"></div>
@@ -51,16 +53,21 @@ get_header();
             
           </div>
       </div>
+    </div>
   </div>
-</div>
+</div><!-- end of modal content -->
 
-<div class="modal fade ftws-modal-cntlr" id="ftwsModal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+
+
+
+
+<div class="modal fade ftws-modal-cntlr" id="ftwsModal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body">
           <div class="ftws-modal-con ftws-modal-con-1">
             <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true"></span>
+              <span aria-hidden="true"><img src="<?php echo THEME_URI;?>/assets/images/close.png"></span>
             </button>
             <div class="ftws-modal-con-img">
               <div style="background: url(<?php echo THEME_URI;?>/assets/images/pop-up-1.png);"></div>
@@ -81,6 +88,8 @@ get_header();
       </div>
   </div>
 </div>
+
+
 
 
 

@@ -4,12 +4,19 @@
     border-radius: 0;
     outline: 0;
 }
+.ftws-modal-cntlr{
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
 .ftws-modal-cntlr .modal-dialog{
 	max-width: 100%!important;
 	padding-left: 10px!important;
 	padding-right: 10px!important;
 	margin-left: 0!important;
 	margin-right: 0!important;
+}
+.ftws-modal-cntlr .modal-body{
+	padding: 0;
 }
 .ftws-modal-con{
 	max-width: 462px;
@@ -31,15 +38,22 @@
 	width: 12px;
 	height: 12px;
 }
+.ftws-modal-con-1 .close.modal-close{
+	left: 50%;
+	right: auto;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	top: 5px;
+	margin-right: 20px;
+}
 .ftws-modal-con button.close.modal-close span {
-    background: url(../images/close.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%!important;
-    width: 12px;
-    height: 12px;
-    position: relative;
-    z-index: 20;
-    display: block;
+	display: block;
+	line-height: 0;
+}
+.ftws-modal-con button.close.modal-close span img{
+	width: 100%;
+	height: 100%;
 }
 .ftws-modal-con-2{
 	border-radius: 0!important;
