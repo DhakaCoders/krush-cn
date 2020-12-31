@@ -21,6 +21,25 @@
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
+}
+.close.modal-close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 20;
+	width: 12px;
+	height: 12px;
+}
+.ftws-modal-con button.close.modal-close span {
+    background: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%!important;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    z-index: 20;
+    display: block;
 }
 .ftws-modal-con-2{
 	border-radius: 0!important;
